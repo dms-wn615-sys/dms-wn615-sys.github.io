@@ -1,0 +1,12 @@
+node_modules/
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/blockgame-release.keystore
+android/keystore.properties
+android/capacitor-cordova-android-plugins/build/
+*.aab
+*.apk
+.DS_Store
+Thumbs.db

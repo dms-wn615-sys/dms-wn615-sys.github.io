@@ -1,0 +1,12 @@
+{
+  "appId": "com.blockgame.app",
+  "appName": "오리 블록 게임",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "scrollEnabled": false
+  }
+}
