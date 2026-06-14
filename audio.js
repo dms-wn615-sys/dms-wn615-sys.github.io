@@ -5,19 +5,20 @@ const GameAudio = {
   musicEnabled: localStorage.getItem('blockgame-music') !== 'off',
   sfxEnabled: localStorage.getItem('blockgame-sfx') !== 'off',
 
+  // Original in-game melody (Web Audio oscillators). Not based on any existing song.
   MELODY: [
-    { freq: 523.25, dur: 0.22 },
-    { freq: 587.33, dur: 0.22 },
-    { freq: 659.25, dur: 0.22 },
-    { freq: 587.33, dur: 0.22 },
-    { freq: 523.25, dur: 0.22 },
-    { freq: 440.0, dur: 0.44 },
-    { freq: 493.88, dur: 0.22 },
-    { freq: 523.25, dur: 0.22 },
-    { freq: 587.33, dur: 0.44 },
-    { freq: 659.25, dur: 0.22 },
-    { freq: 587.33, dur: 0.22 },
-    { freq: 523.25, dur: 0.44 },
+    { freq: 329.63, dur: 0.2 },
+    { freq: 392.0, dur: 0.2 },
+    { freq: 440.0, dur: 0.2 },
+    { freq: 493.88, dur: 0.28 },
+    { freq: 440.0, dur: 0.18 },
+    { freq: 392.0, dur: 0.18 },
+    { freq: 329.63, dur: 0.32 },
+    { freq: 293.66, dur: 0.18 },
+    { freq: 329.63, dur: 0.18 },
+    { freq: 392.0, dur: 0.36 },
+    { freq: 349.23, dur: 0.18 },
+    { freq: 392.0, dur: 0.42 },
   ],
 
   init() {

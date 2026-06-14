@@ -47,6 +47,29 @@ const TRANSLATIONS = {
     noRecords: '아직 기록이 없습니다',
     playerName: '이름',
     playerDefault: '오리',
+    level: '레벨',
+    levelGoal: '목표 {current}/{target}줄 제거',
+    levelStartMsg: '레벨 {level} · 목표 {target}줄 제거',
+    levelComplete: '레벨 클리어!',
+    levelCompleteMsg: '레벨 {level} 완료 · 다음 레벨 {next}',
+    nextLevel: '다음 레벨',
+    retryLevel: '다시 도전',
+    maxLevel: '축하합니다! 10,000레벨 클리어!',
+    modeCampaign: '캠페인',
+    modeTournament: '토너먼트',
+    tournamentRankings: '일일 토너먼트',
+    tournamentStartMsg: '{day} · 5라운드 · 합산 점수 경쟁',
+    tournamentStart: '토너먼트 시작',
+    tournamentRoundGoal: 'R{round}/{max} · 합계 {total} · 목표 {current}/{target}줄',
+    tournamentRoundComplete: '라운드 클리어!',
+    tournamentRoundCompleteMsg: 'R{round}/{max} 완료 · 합계 {total}점',
+    tournamentNextRound: '다음 라운드',
+    tournamentComplete: '토너먼트 우승!',
+    tournamentCompleteMsg: '합계 {total}점 · {clears}줄 · {rank}위',
+    tournamentFail: '토너먼트 종료',
+    tournamentFailMsg: 'R{round}/{max} · 합계 {total}점 · {rank}위',
+    tournamentRetry: '다시 도전',
+    noTournamentRecords: '오늘 기록 없음',
   },
   en: {
     title: 'Duck Block Game',
@@ -73,6 +96,29 @@ const TRANSLATIONS = {
     noRecords: 'No scores yet',
     playerName: 'Name',
     playerDefault: 'Duck',
+    level: 'Level',
+    levelGoal: 'Goal {current}/{target} clears',
+    levelStartMsg: 'Level {level} · Clear {target} lines',
+    levelComplete: 'Level Clear!',
+    levelCompleteMsg: 'Level {level} done · Next {next}',
+    nextLevel: 'Next Level',
+    retryLevel: 'Try Again',
+    maxLevel: 'Congrats! All 10,000 levels cleared!',
+    modeCampaign: 'Campaign',
+    modeTournament: 'Tournament',
+    tournamentRankings: 'Daily Tournament',
+    tournamentStartMsg: '{day} · 5 rounds · highest total score',
+    tournamentStart: 'Start Tournament',
+    tournamentRoundGoal: 'R{round}/{max} · Total {total} · Goal {current}/{target}',
+    tournamentRoundComplete: 'Round Clear!',
+    tournamentRoundCompleteMsg: 'R{round}/{max} done · Total {total}',
+    tournamentNextRound: 'Next Round',
+    tournamentComplete: 'Tournament Champion!',
+    tournamentCompleteMsg: 'Total {total} · {clears} lines · Rank #{rank}',
+    tournamentFail: 'Tournament Over',
+    tournamentFailMsg: 'R{round}/{max} · Total {total} · Rank #{rank}',
+    tournamentRetry: 'Try Again',
+    noTournamentRecords: 'No scores today',
   },
   ja: {
     title: 'アヒルブロックパズル',
@@ -99,6 +145,29 @@ const TRANSLATIONS = {
     noRecords: '記録がありません',
     playerName: '名前',
     playerDefault: 'アヒル',
+    level: 'レベル',
+    levelGoal: '目標 {current}/{target} ライン',
+    levelStartMsg: 'Lv.{level} · {target}ライン消去',
+    levelComplete: 'クリア！',
+    levelCompleteMsg: 'Lv.{level} 完了 · 次 {next}',
+    nextLevel: '次のレベル',
+    retryLevel: 'リトライ',
+    maxLevel: '全10,000レベルクリア！',
+    modeCampaign: 'キャンペーン',
+    modeTournament: 'トーナメント',
+    tournamentRankings: '日次トーナメント',
+    tournamentStartMsg: '{day} · 5ラウンド · 合計スコア',
+    tournamentStart: 'トーナメント開始',
+    tournamentRoundGoal: 'R{round}/{max} · 合計{total} · 目標{current}/{target}',
+    tournamentRoundComplete: 'ラウンドクリア！',
+    tournamentRoundCompleteMsg: 'R{round}/{max} 完了 · 合計{total}',
+    tournamentNextRound: '次のラウンド',
+    tournamentComplete: 'トーナメント優勝！',
+    tournamentCompleteMsg: '合計{total} · {clears}ライン · {rank}位',
+    tournamentFail: 'トーナメント終了',
+    tournamentFailMsg: 'R{round}/{max} · 合計{total} · {rank}位',
+    tournamentRetry: 'リトライ',
+    noTournamentRecords: '今日の記録なし',
   },
   zh: {
     title: '小鸭方块拼图',
@@ -125,6 +194,29 @@ const TRANSLATIONS = {
     noRecords: '暂无记录',
     playerName: '昵称',
     playerDefault: '小鸭',
+    level: '关卡',
+    levelGoal: '目标 {current}/{target} 行',
+    levelStartMsg: '第{level}关 · 消除{target}行',
+    levelComplete: '过关！',
+    levelCompleteMsg: '第{level}关完成 · 下一关 {next}',
+    nextLevel: '下一关',
+    retryLevel: '重试',
+    maxLevel: '恭喜！10000关全部通关！',
+    modeCampaign: '战役',
+    modeTournament: '锦标赛',
+    tournamentRankings: '每日锦标赛',
+    tournamentStartMsg: '{day} · 5轮 · 总分排名',
+    tournamentStart: '开始锦标赛',
+    tournamentRoundGoal: 'R{round}/{max} · 总分{total} · 目标{current}/{target}',
+    tournamentRoundComplete: '轮次过关！',
+    tournamentRoundCompleteMsg: 'R{round}/{max} 完成 · 总分{total}',
+    tournamentNextRound: '下一轮',
+    tournamentComplete: '锦标赛冠军！',
+    tournamentCompleteMsg: '总分{total} · {clears}行 · 第{rank}名',
+    tournamentFail: '锦标赛结束',
+    tournamentFailMsg: 'R{round}/{max} · 总分{total} · 第{rank}名',
+    tournamentRetry: '重试',
+    noTournamentRecords: '今日暂无记录',
   },
   es: {
     title: 'Puzzle de Bloques',
@@ -151,6 +243,29 @@ const TRANSLATIONS = {
     noRecords: 'Sin puntuaciones',
     playerName: 'Nombre',
     playerDefault: 'Pato',
+    level: 'Nivel',
+    levelGoal: 'Meta {current}/{target} líneas',
+    levelStartMsg: 'Nivel {level} · Elimina {target} líneas',
+    levelComplete: '¡Nivel superado!',
+    levelCompleteMsg: 'Nivel {level} · Siguiente {next}',
+    nextLevel: 'Siguiente',
+    retryLevel: 'Reintentar',
+    maxLevel: '¡10.000 niveles completados!',
+    modeCampaign: 'Campaña',
+    modeTournament: 'Torneo',
+    tournamentRankings: 'Torneo diario',
+    tournamentStartMsg: '{day} · 5 rondas · mayor puntuación total',
+    tournamentStart: 'Iniciar torneo',
+    tournamentRoundGoal: 'R{round}/{max} · Total {total} · Meta {current}/{target}',
+    tournamentRoundComplete: '¡Ronda superada!',
+    tournamentRoundCompleteMsg: 'R{round}/{max} · Total {total}',
+    tournamentNextRound: 'Siguiente ronda',
+    tournamentComplete: '¡Campeón del torneo!',
+    tournamentCompleteMsg: 'Total {total} · {clears} líneas · Puesto #{rank}',
+    tournamentFail: 'Torneo terminado',
+    tournamentFailMsg: 'R{round}/{max} · Total {total} · Puesto #{rank}',
+    tournamentRetry: 'Reintentar',
+    noTournamentRecords: 'Sin puntuaciones hoy',
   },
   fr: {
     title: 'Puzzle Blocs Canard',
@@ -177,6 +292,29 @@ const TRANSLATIONS = {
     noRecords: 'Aucun score',
     playerName: 'Nom',
     playerDefault: 'Canard',
+    level: 'Niveau',
+    levelGoal: 'Objectif {current}/{target} lignes',
+    levelStartMsg: 'Niveau {level} · {target} lignes',
+    levelComplete: 'Niveau réussi !',
+    levelCompleteMsg: 'Niveau {level} · Suivant {next}',
+    nextLevel: 'Suivant',
+    retryLevel: 'Réessayer',
+    maxLevel: '10 000 niveaux terminés !',
+    modeCampaign: 'Campagne',
+    modeTournament: 'Tournoi',
+    tournamentRankings: 'Tournoi du jour',
+    tournamentStartMsg: '{day} · 5 manches · score total',
+    tournamentStart: 'Lancer le tournoi',
+    tournamentRoundGoal: 'R{round}/{max} · Total {total} · Objectif {current}/{target}',
+    tournamentRoundComplete: 'Manche réussie !',
+    tournamentRoundCompleteMsg: 'R{round}/{max} · Total {total}',
+    tournamentNextRound: 'Manche suivante',
+    tournamentComplete: 'Champion du tournoi !',
+    tournamentCompleteMsg: 'Total {total} · {clears} lignes · {rank}e',
+    tournamentFail: 'Tournoi terminé',
+    tournamentFailMsg: 'R{round}/{max} · Total {total} · {rank}e',
+    tournamentRetry: 'Réessayer',
+    noTournamentRecords: 'Aucun score aujourd\'hui',
   },
   de: {
     title: 'Enten-Block-Puzzle',
@@ -203,6 +341,29 @@ const TRANSLATIONS = {
     noRecords: 'Noch keine Einträge',
     playerName: 'Name',
     playerDefault: 'Ente',
+    level: 'Level',
+    levelGoal: 'Ziel {current}/{target} Linien',
+    levelStartMsg: 'Level {level} · {target} Linien löschen',
+    levelComplete: 'Level geschafft!',
+    levelCompleteMsg: 'Level {level} · Weiter {next}',
+    nextLevel: 'Nächstes Level',
+    retryLevel: 'Nochmal',
+    maxLevel: 'Alle 10.000 Level geschafft!',
+    modeCampaign: 'Kampagne',
+    modeTournament: 'Turnier',
+    tournamentRankings: 'Tägliches Turnier',
+    tournamentStartMsg: '{day} · 5 Runden · Gesamtpunkte',
+    tournamentStart: 'Turnier starten',
+    tournamentRoundGoal: 'R{round}/{max} · Gesamt {total} · Ziel {current}/{target}',
+    tournamentRoundComplete: 'Runde geschafft!',
+    tournamentRoundCompleteMsg: 'R{round}/{max} · Gesamt {total}',
+    tournamentNextRound: 'Nächste Runde',
+    tournamentComplete: 'Turniersieger!',
+    tournamentCompleteMsg: 'Gesamt {total} · {clears} Linien · Platz {rank}',
+    tournamentFail: 'Turnier beendet',
+    tournamentFailMsg: 'R{round}/{max} · Gesamt {total} · Platz {rank}',
+    tournamentRetry: 'Nochmal',
+    noTournamentRecords: 'Keine Einträge heute',
   },
 };
 
@@ -212,6 +373,9 @@ const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
 const clearsEl = document.getElementById('clears');
 const comboEl = document.getElementById('combo');
+const comboBoxEl = document.getElementById('comboBox');
+const levelNumEl = document.getElementById('levelNum');
+const levelGoalEl = document.getElementById('levelGoal');
 const overlay = document.getElementById('overlay');
 const overlayTitle = document.getElementById('overlayTitle');
 const overlayMessage = document.getElementById('overlayMessage');
@@ -222,6 +386,11 @@ const musicToggle = document.getElementById('musicToggle');
 const sfxToggle = document.getElementById('sfxToggle');
 const playerNameInput = document.getElementById('playerName');
 const leaderboardList = document.getElementById('leaderboardList');
+const tournamentBoard = document.getElementById('tournamentBoard');
+const tournamentList = document.getElementById('tournamentList');
+const tournamentDayEl = document.getElementById('tournamentDay');
+const modeCampaignBtn = document.getElementById('modeCampaign');
+const modeTournamentBtn = document.getElementById('modeTournament');
 
 const LEADERBOARD_KEY = 'blockgame-leaderboard';
 const NICKNAME_KEY = 'blockgame-nickname';
@@ -238,6 +407,13 @@ let combo = 0;
 let gameState = 'idle';
 let lastGameRank = null;
 let lastMadeBoard = false;
+let currentLevel = 1;
+let levelConfig = null;
+let levelRng = null;
+let gameMode = 'campaign';
+let tournamentState = null;
+let lastTournamentRank = null;
+let lastTournamentCompleted = false;
 
 function detectLanguage() {
   const saved = localStorage.getItem('blockgame-lang');
@@ -267,12 +443,146 @@ function applyStaticTranslations() {
 
 function refreshOverlayText() {
   if (gameState === 'idle') {
-    showOverlay(t('title'), t('startMsg'), t('start'));
+    showOverlay(t('title'), getModeStartMessage(), getModeStartButtonText());
   } else if (gameState === 'paused') {
     showOverlay(t('paused'), t('pausedMsg'), t('continue'));
+  } else if (gameState === 'levelcomplete') {
+    if (gameMode === 'tournament') {
+      showOverlay(t('tournamentRoundComplete'), getTournamentRoundCompleteMessage(), t('tournamentNextRound'));
+    } else {
+      showOverlay(t('levelComplete'), getLevelCompleteMessage(), getLevelCompleteButtonText());
+    }
+  } else if (gameState === 'tournamentcomplete') {
+    showOverlay(t('tournamentComplete'), getTournamentCompleteMessage(), t('tournamentRetry'));
   } else if (gameState === 'gameover') {
-    showOverlay(t('gameOver'), getGameOverMessage(), t('restart'));
+    showOverlay(
+      gameMode === 'tournament' ? t('tournamentFail') : t('gameOver'),
+      gameMode === 'tournament' ? getTournamentFailMessage() : getGameOverMessage(),
+      gameMode === 'tournament' ? t('tournamentRetry') : t('retryLevel'),
+    );
   }
+}
+
+function getModeStartMessage() {
+  if (gameMode === 'tournament') {
+    return t('tournamentStartMsg', { day: TournamentSystem.getDayId() });
+  }
+  return getLevelStartMessage();
+}
+
+function getModeStartButtonText() {
+  return gameMode === 'tournament' ? t('tournamentStart') : t('start');
+}
+
+function getTournamentRoundCompleteMessage() {
+  return t('tournamentRoundCompleteMsg', {
+    round: tournamentState?.round ?? 1,
+    max: TournamentSystem.MAX_ROUNDS,
+    total: tournamentState?.totalScore ?? 0,
+  });
+}
+
+function getTournamentCompleteMessage() {
+  return t('tournamentCompleteMsg', {
+    total: tournamentState?.totalScore ?? 0,
+    clears: tournamentState?.totalClears ?? 0,
+    rank: lastTournamentRank ?? '-',
+  });
+}
+
+function getTournamentFailMessage() {
+  return t('tournamentFailMsg', {
+    round: tournamentState?.round ?? 1,
+    max: TournamentSystem.MAX_ROUNDS,
+    total: tournamentState?.totalScore ?? 0,
+    rank: lastTournamentRank ?? '-',
+  });
+}
+
+function getLevelStartMessage() {
+  if (!levelConfig) return t('startMsg');
+  return t('levelStartMsg', { level: currentLevel, target: levelConfig.targetClears });
+}
+
+function getLevelCompleteMessage() {
+  if (currentLevel >= LevelSystem.MAX_LEVEL) return t('maxLevel');
+  return t('levelCompleteMsg', { level: currentLevel, next: currentLevel + 1 });
+}
+
+function getLevelCompleteButtonText() {
+  if (currentLevel >= LevelSystem.MAX_LEVEL) return t('restart');
+  return t('nextLevel');
+}
+
+function updateLevelUI() {
+  if (gameMode === 'tournament' && tournamentState) {
+    levelNumEl.textContent = tournamentState.round;
+    if (gameState === 'idle') {
+      levelGoalEl.textContent = t('tournamentStartMsg', { day: tournamentState.dayId });
+      return;
+    }
+    const total = tournamentState.totalScore + (gameState === 'playing' ? score : 0);
+    levelGoalEl.textContent = t('tournamentRoundGoal', {
+      round: tournamentState.round,
+      max: tournamentState.maxRounds,
+      total,
+      current: Math.min(clears, levelConfig?.targetClears ?? 0),
+      target: levelConfig?.targetClears ?? 0,
+    });
+    return;
+  }
+
+  levelNumEl.textContent = currentLevel;
+  if (!levelConfig || gameState === 'idle') {
+    if (levelConfig) {
+      levelGoalEl.textContent = t('levelGoal', { current: 0, target: levelConfig.targetClears });
+    } else {
+      levelGoalEl.textContent = '';
+    }
+    return;
+  }
+  levelGoalEl.textContent = t('levelGoal', {
+    current: Math.min(clears, levelConfig.targetClears),
+    target: levelConfig.targetClears,
+  });
+}
+
+function setGameMode(mode) {
+  if (gameState !== 'idle') return;
+  gameMode = mode === 'tournament' ? 'tournament' : 'campaign';
+  modeCampaignBtn.classList.toggle('active', gameMode === 'campaign');
+  modeTournamentBtn.classList.toggle('active', gameMode === 'tournament');
+  tournamentBoard.hidden = gameMode !== 'tournament';
+  document.getElementById('leaderboard').hidden = gameMode === 'tournament';
+  if (gameMode === 'tournament') {
+    tournamentState = TournamentSystem.createState();
+    loadLevel(TournamentSystem.getRoundLevel(1, tournamentState.daySeed));
+  } else {
+    tournamentState = null;
+    loadLevel(currentLevel);
+  }
+  updateLevelUI();
+  refreshOverlayText();
+  renderTournamentLeaderboard();
+}
+
+function renderTournamentLeaderboard() {
+  const dayId = TournamentSystem.getDayId();
+  tournamentDayEl.textContent = dayId;
+  const entries = TournamentSystem.getDayScores(dayId);
+  if (!entries.length) {
+    tournamentList.innerHTML = `<li class="leaderboard-empty">${escapeHtml(t('noTournamentRecords'))}</li>`;
+    return;
+  }
+  tournamentList.innerHTML = entries.map((entry, index) => {
+    const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}`;
+    const badge = entry.completed ? '🏆' : '';
+    return `<li class="leaderboard-item${index < 3 ? ' top' : ''}">
+      <span class="leaderboard-rank">${medal}</span>
+      <span class="leaderboard-name">${escapeHtml(entry.name)}${badge}</span>
+      <span class="leaderboard-score">${entry.score}</span>
+    </li>`;
+  }).join('');
 }
 
 function escapeHtml(text) {
@@ -350,6 +660,7 @@ function setLanguage(lang) {
   applyStaticTranslations();
   refreshOverlayText();
   renderLeaderboard();
+  renderTournamentLeaderboard();
   if (playerNameInput) playerNameInput.placeholder = t('playerName');
   if (gameState === 'playing') pauseBtn.textContent = t('pause');
   else if (gameState === 'paused') pauseBtn.textContent = t('continue');
@@ -364,8 +675,13 @@ function randomPiece() {
   return { shape: src.shape.map(row => [...row]), color: src.color };
 }
 
+function randomLevelPiece() {
+  if (!levelRng) return randomPiece();
+  return LevelSystem.pickPiece(levelRng, PIECE_POOL);
+}
+
 function refillTray() {
-  trayPieces = [randomPiece(), randomPiece(), randomPiece()];
+  trayPieces = [randomLevelPiece(), randomLevelPiece(), randomLevelPiece()];
   selectedIndex = null;
 }
 
@@ -393,6 +709,63 @@ function canPlaceAnywhere(shape) {
     }
   }
   return false;
+}
+
+function checkLevelWin() {
+  if (!levelConfig || gameState !== 'playing') return;
+  if (clears >= levelConfig.targetClears) {
+    completeLevel();
+  }
+}
+
+function completeLevel() {
+  gameState = 'levelcomplete';
+  delete document.body.dataset.gameStatePlaying;
+  GameAudio.stopBgm();
+  GameAudio.playClear(1, 1);
+  pauseBtn.disabled = true;
+
+  if (gameMode === 'tournament' && tournamentState) {
+    tournamentState.totalScore += score;
+    tournamentState.totalClears += clears;
+    showOverlay(t('tournamentRoundComplete'), getTournamentRoundCompleteMessage(), t('tournamentNextRound'));
+    return;
+  }
+
+  LevelSystem.saveProgress(currentLevel + 1);
+  saveScoreRecord(score, clears);
+  renderLeaderboard();
+  showOverlay(t('levelComplete'), getLevelCompleteMessage(), getLevelCompleteButtonText());
+}
+
+function finishTournament(completed) {
+  if (!tournamentState) return;
+  if (!completed) {
+    tournamentState.totalScore += score;
+    tournamentState.totalClears += clears;
+  }
+  tournamentState.completed = completed;
+  const result = TournamentSystem.saveResult(
+    getPlayerName(),
+    tournamentState.totalScore,
+    tournamentState.totalClears,
+    tournamentState.dayId,
+    completed,
+  );
+  lastTournamentRank = result.rank;
+  lastTournamentCompleted = completed;
+  renderTournamentLeaderboard();
+  gameState = completed ? 'tournamentcomplete' : 'gameover';
+  delete document.body.dataset.gameStatePlaying;
+  GameAudio.stopBgm();
+  if (completed) GameAudio.playClear(2, 2);
+  else GameAudio.playGameOver();
+  pauseBtn.disabled = true;
+  if (completed) {
+    showOverlay(t('tournamentComplete'), getTournamentCompleteMessage(), t('tournamentRetry'));
+  } else {
+    showOverlay(t('tournamentFail'), getTournamentFailMessage(), t('tournamentRetry'));
+  }
 }
 
 function checkGameOver() {
@@ -438,6 +811,8 @@ function placePiece(index, row, col) {
   }
 
   updateStats();
+  checkLevelWin();
+  if (gameState !== 'playing') return;
   checkGameOver();
   drawAll();
   return true;
@@ -596,6 +971,8 @@ function updateStats() {
   scoreEl.textContent = score;
   clearsEl.textContent = clears;
   comboEl.textContent = combo;
+  comboBoxEl?.classList.toggle('is-active', combo > 0);
+  updateLevelUI();
 }
 
 function showOverlay(title, message, btnText) {
@@ -621,9 +998,33 @@ function getBoardCell(clientX, clientY) {
   return { r: row, c: col };
 }
 
+function loadLevel(levelNum) {
+  currentLevel = Math.max(1, Math.min(LevelSystem.MAX_LEVEL, levelNum));
+  levelConfig = LevelSystem.generateLevel(currentLevel, PIECE_POOL);
+  levelRng = LevelSystem.createRng(levelConfig.seed + 99991);
+  updateLevelUI();
+}
+
+function beginRound() {
+  if (gameMode === 'tournament' && tournamentState) {
+    const levelNum = TournamentSystem.getRoundLevel(tournamentState.round, tournamentState.daySeed);
+    loadLevel(levelNum);
+  } else {
+    loadLevel(currentLevel);
+  }
+  board = levelConfig.board.map(row => [...row]);
+  trayPieces = levelConfig.trayPieces.map(piece => ({
+    shape: piece.shape.map(row => [...row]),
+    color: piece.color,
+  }));
+}
+
 function startGame() {
   GameAudio.resume().then(() => {
-    board = createBoard();
+    if (gameMode === 'tournament') {
+      tournamentState = TournamentSystem.createState();
+    }
+    beginRound();
     score = 0;
     clears = 0;
     combo = 0;
@@ -631,7 +1032,7 @@ function startGame() {
     hoverCell = null;
     lastGameRank = null;
     lastMadeBoard = false;
-    refillTray();
+    lastTournamentRank = null;
     updateStats();
     hideOverlay();
     gameState = 'playing';
@@ -643,7 +1044,64 @@ function startGame() {
   });
 }
 
+function advanceLevel() {
+  if (gameMode === 'tournament') {
+    advanceTournamentRound();
+    return;
+  }
+  if (currentLevel >= LevelSystem.MAX_LEVEL) {
+    currentLevel = LevelSystem.MAX_LEVEL;
+    gameState = 'idle';
+    refreshOverlayText();
+    return;
+  }
+  currentLevel += 1;
+  startGame();
+}
+
+function advanceTournamentRound() {
+  if (!tournamentState) return;
+  if (tournamentState.round >= tournamentState.maxRounds) {
+    finishTournament(true);
+    return;
+  }
+  tournamentState.round += 1;
+  GameAudio.resume().then(() => {
+    beginRound();
+    score = 0;
+    clears = 0;
+    combo = 0;
+    selectedIndex = null;
+    hoverCell = null;
+    updateStats();
+    hideOverlay();
+    gameState = 'playing';
+    document.body.dataset.gameStatePlaying = 'true';
+    pauseBtn.disabled = false;
+    pauseBtn.textContent = t('pause');
+    GameAudio.startBgm();
+    drawAll();
+  });
+}
+
+function resetToIdle() {
+  gameState = 'idle';
+  pauseBtn.disabled = true;
+  if (gameMode === 'tournament') {
+    tournamentState = TournamentSystem.createState();
+    loadLevel(TournamentSystem.getRoundLevel(1, tournamentState.daySeed));
+  } else {
+    loadLevel(currentLevel);
+  }
+  updateLevelUI();
+  refreshOverlayText();
+}
+
 function endGame() {
+  if (gameMode === 'tournament' && tournamentState) {
+    finishTournament(false);
+    return;
+  }
   gameState = 'gameover';
   delete document.body.dataset.gameStatePlaying;
   GameAudio.stopBgm();
@@ -653,7 +1111,7 @@ function endGame() {
   lastGameRank = result.rank;
   lastMadeBoard = result.madeBoard;
   renderLeaderboard();
-  showOverlay(t('gameOver'), getGameOverMessage(), t('restart'));
+  showOverlay(t('gameOver'), getGameOverMessage(), t('retryLevel'));
 }
 
 function togglePause() {
@@ -716,10 +1174,12 @@ traySlots.forEach((slot) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (gameState === 'idle' || gameState === 'gameover') {
+  if (gameState === 'idle' || gameState === 'gameover' || gameState === 'levelcomplete' || gameState === 'tournamentcomplete') {
     if (e.code === 'Enter' || e.code === 'Space') {
       e.preventDefault();
-      startGame();
+      if (gameState === 'levelcomplete') advanceLevel();
+      else if (gameState === 'tournamentcomplete' || gameState === 'gameover') resetToIdle();
+      else startGame();
     }
     return;
   }
@@ -728,8 +1188,13 @@ document.addEventListener('keydown', (e) => {
 
 startBtn.addEventListener('click', () => {
   if (gameState === 'paused') togglePause();
+  else if (gameState === 'levelcomplete') advanceLevel();
+  else if (gameState === 'tournamentcomplete' || (gameState === 'gameover' && gameMode === 'tournament')) resetToIdle();
   else startGame();
 });
+
+modeCampaignBtn.addEventListener('click', () => setGameMode('campaign'));
+modeTournamentBtn.addEventListener('click', () => setGameMode('tournament'));
 
 pauseBtn.addEventListener('click', togglePause);
 langSelect.addEventListener('change', (e) => setLanguage(e.target.value));
@@ -761,5 +1226,8 @@ playerNameInput.addEventListener('change', () => {
 
 updateSoundButtons();
 playerNameInput.value = localStorage.getItem(NICKNAME_KEY) || '';
+currentLevel = LevelSystem.loadProgress();
+loadLevel(currentLevel);
 setLanguage(currentLang);
+renderTournamentLeaderboard();
 drawAll();
