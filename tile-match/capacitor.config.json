@@ -1,0 +1,29 @@
+{
+  "appId": "com.tilematch.game",
+  "appName": "타일 매치",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "automatic",
+    "backgroundColor": "#fff5fb"
+  },
+  "android": {
+    "backgroundColor": "#fff5fb"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1800,
+      "launchAutoHide": true,
+      "backgroundColor": "#fff5fb",
+      "androidSplashResourceName": "splash",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#fff5fb"
+    }
+  }
+}

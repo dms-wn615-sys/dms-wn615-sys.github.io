@@ -1,0 +1,33 @@
+{
+  "name": "tile-match",
+  "version": "1.0.0",
+  "private": true,
+  "description": "타일 매치 - 3매치 타일 퍼즐 게임",
+  "scripts": {
+    "start": "npx serve . -p 8080",
+    "icons": "node scripts/generate-icons.mjs",
+    "android:init": "bubblewrap init --manifest twa-manifest.json",
+    "android:build": "bubblewrap build",
+    "android:validate": "bubblewrap validate",
+    "play:prepare": "npm run icons && bubblewrap validate",
+    "mobile:setup": "npm run icons && npx cap add android && npx cap add ios",
+    "mobile:sync": "npx cap sync",
+    "mobile:android": "npx cap open android",
+    "mobile:ios": "npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/ios": "^6.2.0",
+    "@capacitor/splash-screen": "^6.0.3",
+    "@capacitor/status-bar": "^6.0.2"
+  },
+  "devDependencies": {
+    "@bubblewrap/cli": "^1.24.0",
+    "@capacitor/cli": "^6.2.0",
+    "sharp": "^0.33.5"
+  },
+  "capacitor": {
+    "platforms": ["android", "ios"]
+  }
+}

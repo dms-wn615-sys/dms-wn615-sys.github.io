@@ -1,0 +1,49 @@
+{
+  "packageId": "com.tilematch.game",
+  "host": "YOUR_DOMAIN.com",
+  "name": "타일 매치",
+  "launcherName": "타일매치",
+  "display": "standalone",
+  "themeColor": "#FFF5FB",
+  "themeColorDark": "#FFF5FB",
+  "navigationColor": "#FFF5FB",
+  "navigationColorDark": "#FFF5FB",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#FFF5FB",
+  "enableNotifications": false,
+  "startUrl": "/index.html",
+  "iconUrl": "https://YOUR_DOMAIN.com/icons/icon-512.png",
+  "maskableIconUrl": "https://YOUR_DOMAIN.com/icons/icon-maskable-512.png",
+  "monochromeIconUrl": "https://YOUR_DOMAIN.com/icons/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "tilematch"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://YOUR_DOMAIN.com/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": {
+      "enabled": false
+    },
+    "locationDelegation": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "1.0.0"
+}

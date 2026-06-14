@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff5fb" />
+  <meta name="description" content="타일 매치 - 20,000레벨 3매치 타일 퍼즐 게임" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="타일매치" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>타일 매치</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" sizes="180x180" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" sizes="192x192" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 홈 화면 -->
+    <section id="screen-home" class="screen active">
+      <div class="home-bg" aria-hidden="true">
+        <span class="home-blob blob-1"></span>
+        <span class="home-blob blob-2"></span>
+        <span class="home-blob blob-3"></span>
+        <span class="home-deco deco-1">🌸</span>
+        <span class="home-deco deco-2">✨</span>
+        <span class="home-deco deco-3">🦋</span>
+        <span class="home-deco deco-4">🌼</span>
+        <span class="home-deco deco-5">💖</span>
+        <span class="home-deco deco-6">☁️</span>
+        <span class="home-deco deco-7">🍀</span>
+        <span class="home-deco deco-8">⭐</span>
+      </div>
+      <header class="home-header">
+        <div class="logo-wrap">
+          <img src="icons/logo-flower.svg" alt="" class="logo-icon" width="48" height="48" />
+          <h1 data-i18n="app.title">타일 매치</h1>
+        </div>
+        <p class="tagline" data-i18n="app.tagline">20,000레벨 · 클럽 · 토너먼트</p>
+      </header>
+
+      <div class="home-account guest" id="home-account">
+        <div class="account-guest" id="account-guest-view">
+          <span class="account-guest-icon">👤</span>
+          <div class="account-guest-text">
+            <span class="account-guest-title" data-i18n="home.guestTitle">게스트로 플레이 중</span>
+            <span class="account-guest-sub" data-i18n="home.guestSub">로그인하면 진행 데이터가 계정에 저장됩니다</span>
+          </div>
+          <button class="btn-account-link" data-goto="settings" data-i18n="home.login">로그인</button>
+        </div>
+        <div class="account-user hidden" id="account-user-view">
+          <img class="account-photo hidden" data-auth-photo alt="" />
+          <span class="account-initial" data-auth-initial>?</span>
+          <div class="account-user-text">
+            <span class="account-user-name" data-auth-name>플레이어</span>
+            <span class="account-user-email" data-auth-email></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-stats">
+        <div class="stat-card">
+          <span class="stat-label" data-i18n="home.statLevel">현재 레벨</span>
+          <span class="stat-value" id="home-level">1</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label" data-i18n="home.statStars">별</span>
+          <span class="stat-value" id="home-stars">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label" data-i18n="home.statCoins">코인</span>
+          <span class="stat-value" id="home-coins">100</span>
+        </div>
+      </div>
+
+      <div class="home-chapter-card" id="home-chapter-card">
+        <div class="home-chapter-preview" id="home-chapter-preview"></div>
+        <span class="chapter-label" data-i18n="home.chapterLabel">현재 여행지</span>
+        <span class="chapter-title" id="home-chapter">🌸 벚꽃 정원 · 1장</span>
+        <div class="chapter-progress-bar">
+          <div class="chapter-progress-fill" id="home-chapter-fill"></div>
+        </div>
+        <span class="chapter-sub" id="home-chapter-sub">레벨 1 / 20,000</span>
+      </div>
+
+      <button class="btn-primary btn-play" id="btn-play">
+        <span>▶</span> <span data-i18n="home.continue">계속하기</span>
+      </button>
+
+      <div class="home-shop" id="home-booster-shop">
+        <div class="home-shop-header">
+          <span class="home-shop-title" data-i18n="home.shopTitle">🛒 부스터 상점</span>
+          <span class="shop-coins-badge">🪙 <span id="shop-coins-home">100</span></span>
+        </div>
+        <div class="shop-grid" id="shop-grid-home"></div>
+      </div>
+
+      <div class="home-shortcuts">
+        <button class="shortcut-btn" id="shortcut-club">
+          <span>💬</span>
+          <span data-i18n="home.shortcutClub">클럽 채팅</span>
+        </button>
+        <button class="shortcut-btn" id="shortcut-tournament">
+          <span>🏆</span>
+          <span data-i18n="home.shortcutTournament">토너먼트</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 레벨 선택 화면 -->
+    <section id="screen-levels" class="screen">
+      <div class="screen-bg levels-bg" aria-hidden="true">
+        <div id="levels-chapter-bg" class="levels-chapter-bg"></div>
+      </div>
+      <header class="sub-header">
+        <button class="btn-icon nav-back" data-target="home">←</button>
+        <h2 data-i18n="levels.title">레벨 선택</h2>
+        <span class="sub-header-info" id="levels-total">20,000</span>
+      </header>
+
+      <div class="level-browser">
+        <div class="chapter-nav">
+          <button class="btn-icon" id="btn-chapter-prev">‹</button>
+          <div class="chapter-info">
+            <span id="chapter-title">1장 · 🌸 벚꽃 정원</span>
+            <span id="chapter-range">레벨 1 – 20</span>
+          </div>
+          <button class="btn-icon" id="btn-chapter-next">›</button>
+        </div>
+
+        <div class="level-jump">
+          <input type="number" id="level-jump-input" min="1" max="20000" data-i18n-placeholder="levels.placeholder" placeholder="레벨 번호" />
+          <button class="btn-small" id="btn-level-jump" data-i18n="levels.go">이동</button>
+        </div>
+
+        <div class="level-grid" id="level-grid"></div>
+
+        <div class="page-nav">
+          <button class="btn-small" id="btn-page-prev" data-i18n="levels.prevPage">이전 20</button>
+          <span id="page-info">1 – 20</span>
+          <button class="btn-small" id="btn-page-next" data-i18n="levels.nextPage">다음 20</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 클럽 화면 -->
+    <section id="screen-club" class="screen">
+      <div class="screen-bg club-bg" aria-hidden="true">
+        <span class="screen-blob cb1"></span>
+        <span class="screen-blob cb2"></span>
+        <span class="screen-deco cd1">💬</span>
+        <span class="screen-deco cd2">🌸</span>
+        <span class="screen-deco cd3">✨</span>
+        <span class="screen-deco cd4">👥</span>
+        <span class="screen-deco cd5">💕</span>
+      </div>
+      <header class="sub-header">
+        <button class="btn-icon nav-back" data-target="home">←</button>
+        <h2 data-i18n="club.title">클럽</h2>
+        <button class="btn-icon" id="btn-set-name" data-i18n-title="club.nickname" title="닉네임">✏️</button>
+      </header>
+
+      <div class="club-info-card">
+        <h3 id="club-name">⭐ 별빛 클럽</h3>
+        <p id="club-members">12,847명 온라인</p>
+        <p class="club-progress" id="club-level-progress">클럽 목표: 레벨 1 / 20,000</p>
+      </div>
+
+      <div class="club-list-wrap">
+        <span class="section-label" data-i18n="club.changeClub">클럽 변경</span>
+        <div class="club-list" id="club-list"></div>
+      </div>
+
+      <div class="chat-wrap">
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="quick-chats">
+          <button class="quick-chat" data-msg-key="club.msgHelp" data-i18n="club.help">🆘 도움</button>
+          <button class="quick-chat" data-msg-key="club.msgHint" data-i18n="club.hintShare">💡 힌트</button>
+          <button class="quick-chat" data-msg-key="club.msgClear" data-i18n="club.clear">🎉 클리어</button>
+          <button class="quick-chat" data-msg-key="club.msgCheer" data-i18n="club.cheer">🏆 응원</button>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" data-i18n-placeholder="club.chatPlaceholder" placeholder="메시지 입력..." maxlength="100" />
+          <button class="btn-send" id="btn-send-chat">➤</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 토너먼트 화면 -->
+    <section id="screen-tournament" class="screen">
+      <div class="screen-bg tournament-bg" aria-hidden="true">
+        <span class="screen-blob tb1"></span>
+        <span class="screen-blob tb2"></span>
+        <span class="screen-deco td1">🏆</span>
+        <span class="screen-deco td2">⭐</span>
+        <span class="screen-deco td3">🥇</span>
+        <span class="screen-deco td4">🎯</span>
+        <span class="screen-deco td5">✨</span>
+      </div>
+      <header class="sub-header">
+        <button class="btn-icon nav-back" data-target="home">←</button>
+        <h2 data-i18n="tournament.title">토너먼트</h2>
+        <span class="tournament-badge" data-i18n="tournament.daily">일일</span>
+      </header>
+
+      <div class="tournament-hero">
+        <div class="tournament-timer-wrap">
+          <span class="timer-label" data-i18n="tournament.endsIn">종료까지</span>
+          <span class="timer-value" id="tournament-timer">--</span>
+        </div>
+        <p id="tournament-desc">오늘의 도전 레벨</p>
+        <div class="tournament-stats">
+          <div class="t-stat">
+            <span class="t-label" data-i18n="tournament.myScore">내 점수</span>
+            <span class="t-value" id="tournament-my-score">-</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-label" data-i18n="tournament.rank">순위</span>
+            <span class="t-value" id="tournament-my-score">-</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-label" data-i18n="tournament.rank">순위</span>
+            <span class="t-value" id="tournament-my-rank">미참가</span>
+          </div>
+        </div>
+        <button class="btn-primary" id="btn-tournament-play" data-i18n="tournament.start">🏆 토너먼트 시작</button>
+      </div>
+
+      <div class="leaderboard-wrap">
+        <h3 data-i18n="tournament.leaderboard">🏅 리더보드 TOP 20</h3>
+        <div class="leaderboard-list" id="leaderboard-list"></div>
+      </div>
+    </section>
+
+    <!-- 게임 화면 -->
+    <section id="screen-game" class="screen">
+      <header class="game-header">
+        <button class="btn-icon" id="btn-back" data-i18n-aria="game.back" aria-label="뒤로">←</button>
+        <div class="game-info">
+          <span class="level-badge" id="game-mode-label">레벨 <span id="game-level">1</span></span>
+          <span class="location-badge" id="game-location">🌸 벚꽃 정원</span>
+        </div>
+        <div class="game-coins">
+          <span>🪙</span>
+          <span id="game-coins">100</span>
+        </div>
+      </header>
+
+      <div id="game-timer-hud" class="game-timer-hud">
+        <span>⏱ <span id="game-timer">1:00</span></span>
+        <span id="game-score-wrap" class="hidden"><span data-i18n="game.score">🏆 점수</span> <span id="game-live-score">0</span></span>
+      </div>
+
+      <div id="game-bg" class="game-bg" aria-hidden="true"></div>
+
+      <div class="game-board-wrap">
+        <div id="game-board" class="game-board"></div>
+      </div>
+
+      <div class="slot-bar-wrap">
+        <div class="slot-bar" id="slot-bar">
+          <div class="slot" data-index="0"></div>
+          <div class="slot" data-index="1"></div>
+          <div class="slot" data-index="2"></div>
+          <div class="slot" data-index="3"></div>
+          <div class="slot" data-index="4"></div>
+          <div class="slot" data-index="5"></div>
+          <div class="slot" data-index="6"></div>
+        </div>
+      </div>
+
+      <footer class="game-footer">
+        <button class="booster" id="btn-undo" data-i18n-title="game.booster.undo" title="실행 취소">
+          <span class="booster-icon">↩</span>
+          <span class="booster-count" id="undo-count">3</span>
+        </button>
+        <button class="booster" id="btn-shuffle" data-i18n-title="game.booster.shuffle" title="섞기">
+          <span class="booster-icon">🔀</span>
+          <span class="booster-count" id="shuffle-count">2</span>
+        </button>
+        <button class="booster" id="btn-hint" data-i18n-title="game.booster.hint" title="힌트">
+          <span class="booster-icon">💡</span>
+          <span class="booster-count" id="hint-count">3</span>
+        </button>
+        <button class="booster" id="btn-extra" data-i18n-title="game.booster.extra" title="슬롯 +1">
+          <span class="booster-icon">➕</span>
+          <span class="booster-count" id="extra-count">1</span>
+        </button>
+        <button class="booster booster-shop-btn" id="btn-game-shop" data-i18n-title="game.booster.shop" title="부스터 상점">
+          <span class="booster-icon">🛒</span>
+          <span class="booster-count shop-label" data-i18n="game.shopLabel">상점</span>
+        </button>
+      </footer>
+    </section>
+
+    <!-- 설정 화면 -->
+    <section id="screen-settings" class="screen">
+      <div class="screen-bg settings-bg" aria-hidden="true">
+        <span class="screen-blob sb1"></span>
+        <span class="screen-blob sb2"></span>
+        <span class="screen-blob sb3"></span>
+        <span class="screen-deco sd1">⚙️</span>
+        <span class="screen-deco sd2">🎵</span>
+        <span class="screen-deco sd3">💖</span>
+        <span class="screen-deco sd4">☁️</span>
+        <span class="screen-deco sd5">✨</span>
+        <span class="screen-deco sd6">🌸</span>
+      </div>
+      <header class="sub-header">
+        <button class="btn-icon nav-back" data-target="home">←</button>
+        <h2 data-i18n="settings.title">설정</h2>
+        <span class="sub-header-info">⚙️</span>
+      </header>
+
+      <div class="settings-wrap">
+        <div class="settings-group" id="settings-language">
+          <h3 data-i18n="settings.language">언어</h3>
+          <div class="language-picker" id="language-picker"></div>
+        </div>
+
+        <div class="settings-group" id="settings-account">
+          <h3 data-i18n="settings.account">계정</h3>
+
+          <div class="auth-setup-notice hidden" id="auth-setup-notice">
+            <p data-i18n-html="settings.authSetup">Google 로그인을 사용하려면 <code>js/config.js</code>에 클라이언트 ID를 설정하세요.</p>
+            <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener">Google Cloud Console ↗</a>
+          </div>
+
+          <div id="auth-login-block">
+            <p class="auth-desc" data-i18n="settings.authDesc">Google 계정으로 로그인하면 진행 상황이 기기 간에 저장됩니다.</p>
+            <div class="google-btn-wrap" id="google-signin-btn"></div>
+          </div>
+
+          <div id="auth-profile-block" class="hidden">
+            <div class="profile-card">
+              <img class="profile-photo hidden" data-auth-photo alt="" />
+              <span class="profile-initial" data-auth-initial>?</span>
+              <div class="profile-info">
+                <span class="profile-name" data-auth-name>플레이어</span>
+                <span class="profile-email" data-auth-email></span>
+              </div>
+            </div>
+            <button class="btn-signout" id="btn-signout" data-i18n="settings.signOut">로그아웃</button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3 data-i18n="settings.sound">사운드 &amp; 진동</h3>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <span class="setting-icon">🎵</span>
+              <div>
+                <span class="setting-title" data-i18n="settings.music">배경음악</span>
+                <span class="setting-desc" data-i18n="settings.musicDesc">게임 중 잔잔한 BGM 재생</span>
+              </div>
+            </div>
+            <button class="toggle on" id="toggle-music" role="switch" aria-checked="true" aria-label="배경음악">
+              <span class="toggle-knob"></span>
+            </button>
+          </div>
+
+          <div class="setting-row">
+            <div class="setting-info">
+              <span class="setting-icon">🔊</span>
+              <div>
+                <span class="setting-title" data-i18n="settings.sfx">효과음</span>
+                <span class="setting-desc" data-i18n="settings.sfxDesc">타일, 매치, 버튼 사운드</span>
+              </div>
+            </div>
+            <button class="toggle on" id="toggle-sfx" role="switch" aria-checked="true" aria-label="효과음">
+              <span class="toggle-knob"></span>
+            </button>
+          </div>
+
+          <div class="setting-row" id="setting-vibration-row">
+            <div class="setting-info">
+              <span class="setting-icon">📳</span>
+              <div>
+                <span class="setting-title" data-i18n="settings.vibration">진동</span>
+                <span class="setting-desc" id="vibration-note">타일 선택, 매치, 클리어 시 진동</span>
+              </div>
+            </div>
+            <button class="toggle on" id="toggle-vibration" role="switch" aria-checked="true" aria-label="진동">
+              <span class="toggle-knob"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3 data-i18n="settings.info">게임 정보</h3>
+          <div class="info-row">
+            <span data-i18n="settings.version">버전</span>
+            <span>1.0.0</span>
+          </div>
+          <div class="info-row">
+            <span data-i18n="settings.totalLevels">총 레벨</span>
+            <span>20,000</span>
+          </div>
+          <a class="info-link-row" href="privacy.html" target="_blank" rel="noopener" data-i18n="settings.privacy">개인정보 처리방침 ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 설치 안내 (Android / iPhone PWA) -->
+    <div id="install-banner" class="install-banner hidden" role="dialog" data-i18n-aria="install.dialog" aria-label="앱 설치 안내">
+      <p id="install-banner-text"></p>
+      <div class="install-banner-actions">
+        <button type="button" class="btn-install-primary" id="btn-install">설치</button>
+        <button type="button" class="btn-install-dismiss" id="btn-install-dismiss" aria-label="닫기">✕</button>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 -->
+    <nav id="bottom-nav" class="bottom-nav">
+      <button class="nav-item active" data-screen="home">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label" data-i18n="nav.home">홈</span>
+      </button>
+      <button class="nav-item" data-screen="levels">
+        <span class="nav-icon">🗺️</span>
+        <span class="nav-label" data-i18n="nav.levels">레벨</span>
+      </button>
+      <button class="nav-item" data-screen="club">
+        <span class="nav-icon">💬</span>
+        <span class="nav-label" data-i18n="nav.club">클럽</span>
+      </button>
+      <button class="nav-item" data-screen="tournament">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-label" data-i18n="nav.tournament">대회</span>
+      </button>
+      <button class="nav-item" data-screen="settings">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label" data-i18n="nav.settings">설정</span>
+      </button>
+    </nav>
+
+    <!-- 부스터 상점 모달 -->
+    <div id="shop-overlay" class="modal-overlay hidden">
+      <div class="modal shop-modal">
+        <button type="button" class="shop-close" id="btn-shop-close" data-i18n-aria="install.dialog" aria-label="닫기">✕</button>
+        <h2 data-i18n="shop.title">🛒 부스터 상점</h2>
+        <p class="shop-balance"><span data-i18n="shop.coins">보유 코인</span> <strong id="shop-coins-modal">0</strong> 🪙</p>
+        <div class="shop-grid" id="shop-grid-modal"></div>
+      </div>
+    </div>
+
+    <!-- 결과 모달 -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal" id="modal">
+        <div class="modal-icon" id="modal-icon">🎉</div>
+        <h2 id="modal-title">레벨 클리어!</h2>
+        <p id="modal-message">훌륭해요! 다음 레벨에 도전하세요.</p>
+        <div class="modal-stars" id="modal-stars"></div>
+        <div class="modal-reward" id="modal-reward"></div>
+        <div class="modal-actions">
+          <button class="btn-secondary" id="btn-modal-home">홈</button>
+          <button class="btn-primary" id="btn-modal-next">다음 레벨</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="js/levels.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/mobile.js"></script>
+  <script src="js/game.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').catch(() => {});
+    }
+  </script>
+</body>
+</html>

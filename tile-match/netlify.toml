@@ -1,0 +1,13 @@
+# Netlify 배포용 (선택)
+# Build command: npm run icons
+# Publish directory: .
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Content-Type = "application/manifest+json"

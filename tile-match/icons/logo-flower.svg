@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
+  <defs>
+    <linearGradient id="petal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb3d9"/>
+      <stop offset="100%" stop-color="#ff6b9d"/>
+    </linearGradient>
+    <linearGradient id="petalLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe0ef"/>
+      <stop offset="100%" stop-color="#ff85a2"/>
+    </linearGradient>
+    <linearGradient id="center" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff3bf"/>
+      <stop offset="100%" stop-color="#ffc947"/>
+    </linearGradient>
+  </defs>
+  <!-- petals -->
+  <ellipse cx="60" cy="28" rx="14" ry="22" fill="url(#petalLight)" transform="rotate(0 60 60)"/>
+  <ellipse cx="60" cy="28" rx="14" ry="22" fill="url(#petalLight)" transform="rotate(72 60 60)"/>
+  <ellipse cx="60" cy="28" rx="14" ry="22" fill="url(#petal)" transform="rotate(144 60 60)"/>
+  <ellipse cx="60" cy="28" rx="14" ry="22" fill="url(#petalLight)" transform="rotate(216 60 60)"/>
+  <ellipse cx="60" cy="28" rx="14" ry="22" fill="url(#petal)" transform="rotate(288 60 60)"/>
+  <!-- inner petals -->
+  <ellipse cx="60" cy="38" rx="9" ry="14" fill="#ffc9de" transform="rotate(36 60 60)"/>
+  <ellipse cx="60" cy="38" rx="9" ry="14" fill="#ffb3d9" transform="rotate(108 60 60)"/>
+  <ellipse cx="60" cy="38" rx="9" ry="14" fill="#ffc9de" transform="rotate(180 60 60)"/>
+  <ellipse cx="60" cy="38" rx="9" ry="14" fill="#ffb3d9" transform="rotate(252 60 60)"/>
+  <ellipse cx="60" cy="38" rx="9" ry="14" fill="#ffc9de" transform="rotate(324 60 60)"/>
+  <!-- center -->
+  <circle cx="60" cy="60" r="14" fill="url(#center)"/>
+  <circle cx="55" cy="56" r="2.5" fill="#f59f00" opacity="0.7"/>
+  <circle cx="64" cy="58" r="2" fill="#f59f00" opacity="0.6"/>
+  <circle cx="60" cy="64" r="2.2" fill="#f59f00" opacity="0.65"/>
+  <!-- leaves -->
+  <ellipse cx="38" cy="78" rx="10" ry="6" fill="#6bcb77" transform="rotate(-35 38 78)"/>
+  <ellipse cx="82" cy="80" rx="10" ry="6" fill="#51b364" transform="rotate(35 82 80)"/>
+</svg>
