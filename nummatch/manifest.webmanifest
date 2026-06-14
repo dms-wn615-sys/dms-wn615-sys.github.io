@@ -1,0 +1,26 @@
+{
+  "name": "숫자 맞추기",
+  "short_name": "숫자맞추기",
+  "description": "합이 10이 되는 숫자를 찾아 보드를 클리어하는 퍼즐 게임",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#d4ed91",
+  "theme_color": "#d4ed91",
+  "lang": "ko",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
