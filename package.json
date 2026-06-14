@@ -1,0 +1,21 @@
+{
+  "name": "block-game",
+  "version": "1.0.0",
+  "description": "오리 블록 게임 — 블록 퍼즐",
+  "scripts": {
+    "sync": "npx cap sync",
+    "build:android": "npx cap sync android",
+    "build:ios": "npx cap sync ios",
+    "open:android": "npx cap open android",
+    "store:open": "powershell -ExecutionPolicy Bypass -File ./open-store.ps1",
+    "store:build": "powershell -ExecutionPolicy Bypass -File ./build-aab.ps1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/ios": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  }
+}
