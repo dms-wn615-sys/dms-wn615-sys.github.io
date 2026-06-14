@@ -1,4 +1,4 @@
-const CACHE = 'tile-club-v8';
+const CACHE = 'tile-club-v9';
 const ASSETS = [
   './',
   './index.html',
