@@ -1,113 +1,232 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DMS Games — 오리 블록 게임, 타일 매치, 숫자 맞추기 공식 개발자 페이지">
-  <title>게임 개발자 페이지 · DMS Games</title>
-  <link rel="stylesheet" href="developer.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="site-header">
-    <h1>게임 개발자 페이지</h1>
-    <p>DMS Games · 캐주얼 퍼즐 게임</p>
-    <p class="site-contact"><a href="mailto:dms-wn615@hanmail.net">dms-wn615@hanmail.net</a></p>
-  </header>
-
-  <main class="container">
-    <div class="games-grid">
-      <section class="card game-card">
-        <div class="game-head">
-          <img class="game-icon" src="store-assets/play-store-icon.png" width="52" height="52" alt="오리 블록 게임 아이콘">
-          <div>
-            <h2>오리 블록 게임</h2>
-            <p class="game-tagline">8×8 오리 블록 퍼즐</p>
-          </div>
-        </div>
-        <p class="game-desc">블록을 놓아 줄·열을 채우면 사라지는 캐주얼 퍼즐. 7개국어·BGM·순위.</p>
-        <ul class="game-features">
-          <li>캠페인·일일 토너먼트</li>
-          <li>오프라인 플레이</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="index.html">플레이</a>
-          <a class="btn btn-secondary" href="privacy-policy.html">개인정보</a>
-        </div>
-        <dl class="meta">
-          <dt>패키지</dt>
-          <dd>com.blockgame.app</dd>
-          <dt>등급</dt>
-          <dd>전체</dd>
-        </dl>
-      </section>
-
-      <section class="card game-card game-card--tile">
-        <div class="game-head">
-          <img class="game-icon game-icon--tile" src="tile-match/icons/icon.svg" width="52" height="52" alt="타일 매치 아이콘">
-          <div>
-            <h2>타일 매치</h2>
-            <p class="game-tagline">3매치 · 20,000레벨</p>
-          </div>
-        </div>
-        <p class="game-desc">같은 타일 3개를 모아 제거하는 퍼즐. 클럽·토너먼트·PWA.</p>
-        <ul class="game-features">
-          <li>12개 테마·부스터</li>
-          <li>3개국어</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn-primary btn-tile" href="tile-match/index.html">플레이</a>
-          <a class="btn btn-secondary" href="tile-match/privacy.html">개인정보</a>
-        </div>
-        <dl class="meta">
-          <dt>패키지</dt>
-          <dd>com.tilematch.game</dd>
-          <dt>등급</dt>
-          <dd>전체</dd>
-        </dl>
-      </section>
-
-      <section class="card game-card game-card--nummatch">
-        <div class="game-head">
-          <img class="game-icon game-icon--nummatch" src="store-assets/nummatch-icon.png" width="52" height="52" alt="숫자 맞추기 아이콘">
-          <div>
-            <h2>숫자 맞추기</h2>
-            <p class="game-tagline">합 10 숫자 퍼즐</p>
-          </div>
-        </div>
-        <p class="game-desc">합이 10이 되도록 숫자를 연결해 제거. 손글씨 UI·대전.</p>
-        <ul class="game-features">
-          <li>일일 챌린지·토너먼트</li>
-          <li>7개국어·PWA</li>
-        </ul>
-        <div class="btn-row">
-          <a class="btn btn-primary btn-nummatch" href="nummatch/">플레이</a>
-          <a class="btn btn-secondary" href="nummatch/privacy.html">개인정보</a>
-        </div>
-        <dl class="meta">
-          <dt>패키지</dt>
-          <dd>com.mydhfl.nummatch</dd>
-          <dt>등급</dt>
-          <dd>전체</dd>
-        </dl>
-      </section>
-    </div>
-
-    <section class="card">
-      <h2>저작권</h2>
-      <p>
-        각 게임의 그래픽·코드·사운드·레벨 시스템은 독자 제작 콘텐츠입니다.
-        타사 퍼즐 게임 상표와 무관하며, 복제·무단 배포를 금합니다.
-      </p>
-      <p><a href="licenses.html">저작권·오픈소스 고지 전문 보기 (오리 블록 게임)</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 DMS Games · <a href="privacy-policy.html">오리 블록 개인정보 처리방침</a> · <a href="tile-match/privacy.html">타일 매치 개인정보 처리방침</a> · <a href="nummatch/privacy.html">숫자 맞추기 개인정보 처리방침</a></p>
-  </footer>
-</body>
-</html>
-
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="DMS Games — 오리 블록 게임, 타일 매치, 숫자 맞추기 공식 개발자 페이지">
+
+  <title>게임 개발자 페이지 · DMS Games</title>
+
+  <link rel="stylesheet" href="developer.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <h1>게임 개발자 페이지</h1>
+
+    <p>DMS Games · 캐주얼 퍼즐 게임</p>
+
+    <p class="site-contact"><a href="mailto:dms-wn615@hanmail.net">dms-wn615@hanmail.net</a></p>
+
+  </header>
+
+
+
+  <main class="container">
+
+    <div class="games-grid">
+
+      <section class="card game-card">
+
+        <div class="game-head">
+
+          <img class="game-icon" src="store-assets/play-store-icon.png" width="52" height="52" alt="오리 블록 게임 아이콘">
+
+          <div>
+
+            <h2>오리 블록 게임</h2>
+
+            <p class="game-tagline">8×8 오리 블록 퍼즐</p>
+
+          </div>
+
+        </div>
+
+        <p class="game-desc">블록을 놓아 줄·열을 채우면 사라지는 캐주얼 퍼즐. 7개국어·BGM·순위.</p>
+
+        <ul class="game-features">
+
+          <li>캠페인·일일 토너먼트</li>
+
+          <li>오프라인 플레이</li>
+
+        </ul>
+
+        <div class="btn-row">
+
+          <a class="btn btn-primary" href="index.html">플레이</a>
+
+          <a class="btn btn-secondary" href="privacy-policy.html">개인정보</a>
+          <a class="btn btn-secondary" href="licenses.html">저작권</a>
+
+        </div>
+
+        <dl class="meta">
+
+          <dt>패키지</dt>
+
+          <dd>com.blockgame.app</dd>
+
+          <dt>등급</dt>
+
+          <dd>전체</dd>
+
+        </dl>
+
+      </section>
+
+
+
+      <section class="card game-card game-card--tile">
+
+        <div class="game-head">
+
+          <img class="game-icon game-icon--tile" src="tile-match/icons/icon.svg" width="52" height="52" alt="타일 매치 아이콘">
+
+          <div>
+
+            <h2>타일 매치</h2>
+
+            <p class="game-tagline">3매치 · 20,000레벨</p>
+
+          </div>
+
+        </div>
+
+        <p class="game-desc">같은 타일 3개를 모아 제거하는 퍼즐. 클럽·토너먼트·PWA.</p>
+
+        <ul class="game-features">
+
+          <li>12개 테마·부스터</li>
+
+          <li>7개국어 (한국어, English, 日本語, 中文, Español, Français, Deutsch)</li>
+
+        </ul>
+
+        <div class="btn-row">
+
+          <a class="btn btn-primary btn-tile" href="tile-match/index.html">플레이</a>
+
+          <a class="btn btn-secondary" href="tile-match/privacy.html">개인정보</a>
+          <a class="btn btn-secondary" href="tile-match/licenses.html">저작권</a>
+
+        </div>
+
+        <dl class="meta">
+
+          <dt>패키지</dt>
+
+          <dd>com.tilematch.game</dd>
+
+          <dt>등급</dt>
+
+          <dd>전체</dd>
+
+        </dl>
+
+      </section>
+
+
+
+      <section class="card game-card game-card--nummatch">
+
+        <div class="game-head">
+
+          <img class="game-icon game-icon--nummatch" src="store-assets/nummatch-icon.png" width="52" height="52" alt="숫자 맞추기 아이콘">
+
+          <div>
+
+            <h2>숫자 맞추기</h2>
+
+            <p class="game-tagline">합 10 숫자 퍼즐</p>
+
+          </div>
+
+        </div>
+
+        <p class="game-desc">합이 10이 되도록 숫자를 연결해 제거. 손글씨 UI·대전.</p>
+
+        <ul class="game-features">
+
+          <li>일일 챌린지·토너먼트</li>
+
+          <li>7개국어·PWA</li>
+
+        </ul>
+
+        <div class="btn-row">
+
+          <a class="btn btn-primary btn-nummatch" href="nummatch/">플레이</a>
+
+          <a class="btn btn-secondary" href="nummatch/privacy.html">개인정보</a>
+          <a class="btn btn-secondary" href="nummatch/licenses.html">저작권</a>
+
+        </div>
+
+        <dl class="meta">
+
+          <dt>패키지</dt>
+
+          <dd>com.mydhfl.nummatch</dd>
+
+          <dt>등급</dt>
+
+          <dd>전체</dd>
+
+        </dl>
+
+      </section>
+
+    </div>
+
+
+
+    <section class="card">
+
+      <h2>저작권</h2>
+
+      <p>
+
+        각 게임의 그래픽·코드·사운드·레벨 시스템은 독자 제작 콘텐츠입니다.
+
+        타사 퍼즐 게임 상표와 무관하며, 복제·무단 배포를 금합니다.
+
+      </p>
+
+      <p>
+        <a href="licenses.html">오리 블록 게임</a> ·
+        <a href="tile-match/licenses.html">타일 매치</a> ·
+        <a href="nummatch/licenses.html">숫자 맞추기</a>
+      </p>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="site-footer">
+
+    <p>© 2026 DMS Games · <a href="privacy-policy.html">오리 블록 개인정보 처리방침</a> · <a href="tile-match/privacy.html">타일 매치 개인정보 처리방침</a> · <a href="nummatch/privacy.html">숫자 맞추기 개인정보 처리방침</a></p>
+
+  </footer>
+
+</body>
+
+</html>
+
+

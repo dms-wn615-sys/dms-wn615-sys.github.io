@@ -1,8 +1,9 @@
-const CACHE = 'tile-club-v9';
+const CACHE = 'tile-club-v11';
 const ASSETS = [
   './',
   './index.html',
   './privacy.html',
+  './licenses.html',
   './css/style.css',
   './js/config.js',
   './js/i18n.js',

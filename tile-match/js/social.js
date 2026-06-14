@@ -173,7 +173,10 @@ const Social = (function () {
     renderChat();
 
     const bot = BOT_MEMBERS[Math.floor(Math.random() * BOT_MEMBERS.length)];
-    const pool = text.includes('도움') || text.includes('힌트') ? HELP_REPLIES : CHAT_REPLIES;
+    const helpKeys = ['도움', 'help', 'hint', '힌트', 'ヒント', 'ヘルプ', 'ayuda', 'aide', 'hilfe', '帮助', '提示', 'pista', 'indice', 'tipp'];
+    const lower = text.toLowerCase();
+    const isHelp = helpKeys.some((k) => lower.includes(k.toLowerCase()));
+    const pool = isHelp ? HELP_REPLIES : CHAT_REPLIES;
     const reply = pool[Math.floor(Math.random() * pool.length)];
 
     setTimeout(() => {
