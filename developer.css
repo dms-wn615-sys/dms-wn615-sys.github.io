@@ -103,15 +103,29 @@ a:hover {
   border-top: 4px solid #e879f9;
 }
 
-.subheading {
-  font-size: 0.95rem;
-  margin: 1rem 0 0.5rem;
-  color: var(--accent);
+.game-card--nummatch {
+  border-top: 4px solid #a8d45a;
+}
+
+.game-icon--nummatch {
+  background: #e8f5c8;
+  padding: 4px;
 }
 
 .btn-tile {
   background: linear-gradient(135deg, #a855f7, #ec4899);
   box-shadow: 0 4px 16px rgba(168, 85, 247, 0.35);
+}
+
+.btn-nummatch {
+  background: linear-gradient(135deg, #689f38, #558b2f);
+  box-shadow: 0 4px 16px rgba(85, 139, 47, 0.35);
+}
+
+.subheading {
+  font-size: 0.95rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--accent);
 }
 
 .container {
