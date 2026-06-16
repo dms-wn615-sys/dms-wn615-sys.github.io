@@ -1,5 +1,5 @@
 {
-  "appId": "com.tilematch.game",
+  "appId": "com.dmsgames.tilematch",
   "appName": "타일 매치",
   "webDir": ".",
   "bundledWebRuntime": false,

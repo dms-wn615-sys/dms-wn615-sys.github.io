@@ -55,10 +55,12 @@ const LevelSystem = (() => {
   }
 
   function getTargetClears(levelNum) {
-    const base = 1 + Math.floor(Math.sqrt(levelNum) * 0.11);
-    const milestone = levelNum % 25 === 0 ? 1 : 0;
-    const boss = levelNum % 100 === 0 ? 1 : 0;
-    return Math.min(base + milestone + boss, 18);
+    const level = Math.max(1, Math.floor(levelNum) || 1);
+    const curve = Math.floor(Math.sqrt(level) * 0.28);
+    const linear = Math.floor((level - 1) / 40);
+    const milestone = level % 25 === 0 ? 1 : 0;
+    const boss = level % 100 === 0 ? 2 : 0;
+    return Math.min(1 + curve + linear + milestone + boss, 100);
   }
 
   function getObstacleCount(levelNum) {
@@ -106,11 +108,30 @@ const LevelSystem = (() => {
     }
   }
 
+  function generateFreePlay(piecePool) {
+    const seed = (Date.now() >>> 0) || 1;
+    const rng = createRng(seed);
+    const board = Array.from({ length: GRID }, () => Array(GRID).fill(null));
+    return {
+      level: 0,
+      targetClears: 0,
+      board: cloneBoard(board),
+      trayPieces: [
+        pickPiece(rng, piecePool),
+        pickPiece(rng, piecePool),
+        pickPiece(rng, piecePool),
+      ],
+      seed,
+      freePlay: true,
+    };
+  }
+
   return {
     MAX_LEVEL,
     GRID,
     createRng,
     generateLevel,
+    generateFreePlay,
     loadProgress,
     saveProgress,
     pickPiece,

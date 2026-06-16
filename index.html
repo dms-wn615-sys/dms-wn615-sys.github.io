@@ -76,6 +76,7 @@
       <div class="mode-tabs" role="tablist" aria-label="Game mode">
         <button type="button" class="mode-tab active" id="modeCampaign" data-mode="campaign" data-i18n="modeCampaign">캠페인</button>
         <button type="button" class="mode-tab" id="modeTournament" data-mode="tournament" data-i18n="modeTournament">토너먼트</button>
+        <button type="button" class="mode-tab" id="modeFreeplay" data-mode="freeplay" data-i18n="modeFreeplay">자유</button>
       </div>
     </header>
 
@@ -110,7 +111,23 @@
           <span class="stat-value" id="combo">0</span>
         </div>
       </div>
+      <div class="high-score-row" id="highScoreRow">
+        <div class="high-score-pill">
+          <span class="high-score-icon" aria-hidden="true">🏆</span>
+          <span class="stat-label" id="highScoreLabel" data-i18n="highScore">최고 점수</span>
+          <span class="stat-value" id="highScore">—</span>
+        </div>
+      </div>
       <div class="level-goal" id="levelGoal" aria-live="polite"></div>
+
+      <div class="piece-tray">
+        <span class="stat-label tray-label" data-i18n="pickBlock">다음 블록</span>
+        <div class="tray-slots" id="traySlots">
+          <div class="tray-slot" data-index="0"><canvas width="100" height="100"></canvas></div>
+          <div class="tray-slot" data-index="1"><canvas width="100" height="100"></canvas></div>
+          <div class="tray-slot" data-index="2"><canvas width="100" height="100"></canvas></div>
+        </div>
+      </div>
 
       <div class="board-wrapper">
         <canvas id="gameCanvas" width="320" height="320"></canvas>
@@ -123,21 +140,10 @@
         </div>
       </div>
 
-      <div class="piece-tray">
-        <span class="stat-label tray-label" data-i18n="pickBlock">블록 선택</span>
-        <div class="tray-slots" id="traySlots">
-          <div class="tray-slot" data-index="0"><canvas width="100" height="100"></canvas></div>
-          <div class="tray-slot" data-index="1"><canvas width="100" height="100"></canvas></div>
-          <div class="tray-slot" data-index="2"><canvas width="100" height="100"></canvas></div>
-        </div>
-      </div>
-
       <div class="controls-box">
         <span class="stat-label" data-i18n="controls">조작법</span>
-        <p class="controls-hint" data-i18n="controlsHint">블록을 선택한 뒤 보드에 놓을 위치를 클릭하세요.</p>
+        <p class="controls-hint" data-i18n="controlsHint">보드를 터치/클릭하여 블록을 배치하세요.</p>
       </div>
-
-      <button class="btn-secondary" id="pauseBtn" disabled data-i18n="pause">일시정지</button>
 
       <p class="legal-footer">
         <a href="licenses.html">저작권·오픈소스 고지</a>

@@ -65,7 +65,7 @@ npm run mobile:ios
 
 1. Android Studio → **Build → Generate Signed Bundle / APK** → AAB
 2. [Play Console](https://play.google.com/console)에 업로드
-3. 패키지 ID: `com.tilematch.game`
+3. 패키지 ID: `com.dmsgames.tilematch`
 
 ### iOS App Store (Capacitor)
 

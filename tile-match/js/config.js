@@ -12,7 +12,7 @@ const APP_CONFIG = {
   APP_URL: 'https://dms-wn615-sys.github.io/tile-match',
 
   /** Android 패키지 ID — twa-manifest.json과 동일하게 유지 */
-  PACKAGE_ID: 'com.tilematch.game',
+  PACKAGE_ID: 'com.dmsgames.tilematch',
 
   /** Play Console·개인정보 처리방침 문의 이메일 */
   SUPPORT_EMAIL: 'dms-wn615@hanmail.net',

@@ -29,9 +29,9 @@ const TRANSLATIONS = {
     score: '점수',
     clears: '제거',
     combo: '콤보',
-    pickBlock: '블록 선택',
+    pickBlock: '다음 블록',
     controls: '조작법',
-    controlsHint: '블록을 선택한 뒤 보드에 놓을 위치를 클릭하세요.',
+    controlsHint: '보드를 터치/클릭하여 블록을 배치하세요.',
     pause: '일시정지',
     start: '게임 시작',
     restart: '다시 시작',
@@ -44,6 +44,11 @@ const TRANSLATIONS = {
     rankings: '점수 순위',
     rankMsg: '{rank}위',
     newRecord: '🏆 1위!',
+    newHighScore: '🏆 새 최고 기록!',
+    highScore: '최고 점수',
+    highScoreTournament: '토너먼트 최고',
+    highScoreFreeplay: '자유 모드 최고',
+    noHighScore: '—',
     noRecords: '아직 기록이 없습니다',
     playerName: '이름',
     playerDefault: '오리',
@@ -57,6 +62,9 @@ const TRANSLATIONS = {
     maxLevel: '축하합니다! 10,000레벨 클리어!',
     modeCampaign: '캠페인',
     modeTournament: '토너먼트',
+    modeFreeplay: '자유',
+    freeplayStartMsg: '빈 보드에서 자유롭게 플레이하세요!',
+    freeplayGoal: '제거 {clears}줄 · 목표 없음',
     tournamentRankings: '일일 토너먼트',
     tournamentStartMsg: '{day} · 5라운드 · 합산 점수 경쟁',
     tournamentStart: '토너먼트 시작',
@@ -78,9 +86,9 @@ const TRANSLATIONS = {
     score: 'Score',
     clears: 'Clears',
     combo: 'Combo',
-    pickBlock: 'Pick a block',
+    pickBlock: 'Next block',
     controls: 'How to play',
-    controlsHint: 'Select a block, then tap the board to place it.',
+    controlsHint: 'Tap the board to place the current block.',
     pause: 'Pause',
     start: 'Start Game',
     restart: 'Play Again',
@@ -93,6 +101,11 @@ const TRANSLATIONS = {
     rankings: 'Top Scores',
     rankMsg: 'Rank #{rank}',
     newRecord: '🏆 #1!',
+    newHighScore: '🏆 New best!',
+    highScore: 'Best Score',
+    highScoreTournament: 'Tournament Best',
+    highScoreFreeplay: 'Free Play Best',
+    noHighScore: '—',
     noRecords: 'No scores yet',
     playerName: 'Name',
     playerDefault: 'Duck',
@@ -106,6 +119,9 @@ const TRANSLATIONS = {
     maxLevel: 'Congrats! All 10,000 levels cleared!',
     modeCampaign: 'Campaign',
     modeTournament: 'Tournament',
+    modeFreeplay: 'Free',
+    freeplayStartMsg: 'Play freely on an empty board!',
+    freeplayGoal: '{clears} clears · No goal',
     tournamentRankings: 'Daily Tournament',
     tournamentStartMsg: '{day} · 5 rounds · highest total score',
     tournamentStart: 'Start Tournament',
@@ -127,9 +143,9 @@ const TRANSLATIONS = {
     score: 'スコア',
     clears: '消去',
     combo: 'コンボ',
-    pickBlock: 'ブロック選択',
+    pickBlock: '次のブロック',
     controls: '操作',
-    controlsHint: 'ブロックを選んでボードをタップして配置',
+    controlsHint: 'ボードをタップしてブロックを配置',
     pause: '一時停止',
     start: 'ゲーム開始',
     restart: 'もう一度',
@@ -142,6 +158,11 @@ const TRANSLATIONS = {
     rankings: 'スコアランキング',
     rankMsg: '{rank}位',
     newRecord: '🏆 1位!',
+    newHighScore: '🏆 自己ベスト更新!',
+    highScore: '最高スコア',
+    highScoreTournament: 'トーナメント最高',
+    highScoreFreeplay: 'フリーモード最高',
+    noHighScore: '—',
     noRecords: '記録がありません',
     playerName: '名前',
     playerDefault: 'アヒル',
@@ -155,6 +176,9 @@ const TRANSLATIONS = {
     maxLevel: '全10,000レベルクリア！',
     modeCampaign: 'キャンペーン',
     modeTournament: 'トーナメント',
+    modeFreeplay: 'フリー',
+    freeplayStartMsg: '空のボードで自由にプレイ！',
+    freeplayGoal: '消去 {clears} · 目標なし',
     tournamentRankings: '日次トーナメント',
     tournamentStartMsg: '{day} · 5ラウンド · 合計スコア',
     tournamentStart: 'トーナメント開始',
@@ -176,9 +200,9 @@ const TRANSLATIONS = {
     score: '分数',
     clears: '消除',
     combo: '连击',
-    pickBlock: '选择方块',
+    pickBlock: '下一个方块',
     controls: '操作',
-    controlsHint: '选择方块后点击棋盘放置',
+    controlsHint: '点击棋盘放置当前方块',
     pause: '暂停',
     start: '开始游戏',
     restart: '再来一次',
@@ -191,6 +215,11 @@ const TRANSLATIONS = {
     rankings: '分数排行',
     rankMsg: '第{rank}名',
     newRecord: '🏆 第1名!',
+    newHighScore: '🏆 刷新最高分!',
+    highScore: '最高分',
+    highScoreTournament: '锦标赛最高',
+    highScoreFreeplay: '自由模式最高',
+    noHighScore: '—',
     noRecords: '暂无记录',
     playerName: '昵称',
     playerDefault: '小鸭',
@@ -204,6 +233,9 @@ const TRANSLATIONS = {
     maxLevel: '恭喜！10000关全部通关！',
     modeCampaign: '战役',
     modeTournament: '锦标赛',
+    modeFreeplay: '自由',
+    freeplayStartMsg: '在空棋盘上自由游玩！',
+    freeplayGoal: '消除 {clears} 行 · 无目标',
     tournamentRankings: '每日锦标赛',
     tournamentStartMsg: '{day} · 5轮 · 总分排名',
     tournamentStart: '开始锦标赛',
@@ -225,9 +257,9 @@ const TRANSLATIONS = {
     score: 'Puntos',
     clears: 'Eliminados',
     combo: 'Combo',
-    pickBlock: 'Elige un bloque',
+    pickBlock: 'Siguiente bloque',
     controls: 'Controles',
-    controlsHint: 'Elige un bloque y toca el tablero para colocarlo.',
+    controlsHint: 'Toca el tablero para colocar el bloque actual.',
     pause: 'Pausar',
     start: 'Iniciar',
     restart: 'Jugar de nuevo',
@@ -240,6 +272,11 @@ const TRANSLATIONS = {
     rankings: 'Ranking',
     rankMsg: 'Puesto #{rank}',
     newRecord: '🏆 ¡#1!',
+    newHighScore: '🏆 ¡Nuevo récord!',
+    highScore: 'Mejor puntuación',
+    highScoreTournament: 'Mejor torneo',
+    highScoreFreeplay: 'Mejor modo libre',
+    noHighScore: '—',
     noRecords: 'Sin puntuaciones',
     playerName: 'Nombre',
     playerDefault: 'Pato',
@@ -253,6 +290,9 @@ const TRANSLATIONS = {
     maxLevel: '¡10.000 niveles completados!',
     modeCampaign: 'Campaña',
     modeTournament: 'Torneo',
+    modeFreeplay: 'Libre',
+    freeplayStartMsg: '¡Juega libremente en un tablero vacío!',
+    freeplayGoal: '{clears} líneas · Sin meta',
     tournamentRankings: 'Torneo diario',
     tournamentStartMsg: '{day} · 5 rondas · mayor puntuación total',
     tournamentStart: 'Iniciar torneo',
@@ -274,9 +314,9 @@ const TRANSLATIONS = {
     score: 'Score',
     clears: 'Effacés',
     combo: 'Combo',
-    pickBlock: 'Choisir un bloc',
+    pickBlock: 'Bloc suivant',
     controls: 'Commandes',
-    controlsHint: 'Sélectionnez un bloc puis touchez le plateau.',
+    controlsHint: 'Touchez le plateau pour placer le bloc actuel.',
     pause: 'Pause',
     start: 'Commencer',
     restart: 'Rejouer',
@@ -289,6 +329,11 @@ const TRANSLATIONS = {
     rankings: 'Classement',
     rankMsg: '{rank}e place',
     newRecord: '🏆 1er !',
+    newHighScore: '🏆 Nouveau record !',
+    highScore: 'Meilleur score',
+    highScoreTournament: 'Record tournoi',
+    highScoreFreeplay: 'Record mode libre',
+    noHighScore: '—',
     noRecords: 'Aucun score',
     playerName: 'Nom',
     playerDefault: 'Canard',
@@ -302,6 +347,9 @@ const TRANSLATIONS = {
     maxLevel: '10 000 niveaux terminés !',
     modeCampaign: 'Campagne',
     modeTournament: 'Tournoi',
+    modeFreeplay: 'Libre',
+    freeplayStartMsg: 'Jouez librement sur un plateau vide !',
+    freeplayGoal: '{clears} lignes · Sans objectif',
     tournamentRankings: 'Tournoi du jour',
     tournamentStartMsg: '{day} · 5 manches · score total',
     tournamentStart: 'Lancer le tournoi',
@@ -323,9 +371,9 @@ const TRANSLATIONS = {
     score: 'Punkte',
     clears: 'Gelöscht',
     combo: 'Combo',
-    pickBlock: 'Block wählen',
+    pickBlock: 'Nächster Block',
     controls: 'Steuerung',
-    controlsHint: 'Block wählen, dann Brett antippen zum Platzieren.',
+    controlsHint: 'Tippe aufs Brett, um den aktuellen Block zu legen.',
     pause: 'Pause',
     start: 'Spiel starten',
     restart: 'Nochmal spielen',
@@ -338,6 +386,11 @@ const TRANSLATIONS = {
     rankings: 'Bestenliste',
     rankMsg: 'Platz {rank}',
     newRecord: '🏆 Platz 1!',
+    newHighScore: '🏆 Neuer Rekord!',
+    highScore: 'Highscore',
+    highScoreTournament: 'Turnier-Rekord',
+    highScoreFreeplay: 'Freispiel-Rekord',
+    noHighScore: '—',
     noRecords: 'Noch keine Einträge',
     playerName: 'Name',
     playerDefault: 'Ente',
@@ -351,6 +404,9 @@ const TRANSLATIONS = {
     maxLevel: 'Alle 10.000 Level geschafft!',
     modeCampaign: 'Kampagne',
     modeTournament: 'Turnier',
+    modeFreeplay: 'Frei',
+    freeplayStartMsg: 'Spiele frei auf einem leeren Brett!',
+    freeplayGoal: '{clears} Linien · Kein Ziel',
     tournamentRankings: 'Tägliches Turnier',
     tournamentStartMsg: '{day} · 5 Runden · Gesamtpunkte',
     tournamentStart: 'Turnier starten',
@@ -371,6 +427,10 @@ const langSelect = document.getElementById('langSelect');
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
+const scoreBoxEl = document.querySelector('.stat-box--score');
+const highScoreEl = document.getElementById('highScore');
+const highScoreRow = document.getElementById('highScoreRow');
+const highScoreLabel = document.getElementById('highScoreLabel');
 const clearsEl = document.getElementById('clears');
 const comboEl = document.getElementById('combo');
 const comboBoxEl = document.getElementById('comboBox');
@@ -380,7 +440,6 @@ const overlay = document.getElementById('overlay');
 const overlayTitle = document.getElementById('overlayTitle');
 const overlayMessage = document.getElementById('overlayMessage');
 const startBtn = document.getElementById('startBtn');
-const pauseBtn = document.getElementById('pauseBtn');
 const traySlots = document.querySelectorAll('.tray-slot');
 const musicToggle = document.getElementById('musicToggle');
 const sfxToggle = document.getElementById('sfxToggle');
@@ -391,15 +450,17 @@ const tournamentList = document.getElementById('tournamentList');
 const tournamentDayEl = document.getElementById('tournamentDay');
 const modeCampaignBtn = document.getElementById('modeCampaign');
 const modeTournamentBtn = document.getElementById('modeTournament');
+const modeFreeplayBtn = document.getElementById('modeFreeplay');
+const levelLabelEl = document.querySelector('.stat-box--level .stat-label');
 
 const LEADERBOARD_KEY = 'blockgame-leaderboard';
 const NICKNAME_KEY = 'blockgame-nickname';
+const PERSONAL_BEST_KEY = 'blockgame-personal-best';
 const MAX_LEADERBOARD = 10;
 
 let currentLang = detectLanguage();
 let board = [];
-let trayPieces = [null, null, null];
-let selectedIndex = null;
+let pieceQueue = [];
 let hoverCell = null;
 let score = 0;
 let clears = 0;
@@ -414,6 +475,13 @@ let gameMode = 'campaign';
 let tournamentState = null;
 let lastTournamentRank = null;
 let lastTournamentCompleted = false;
+let lastNewHighScore = false;
+
+function normalizeGameMode(mode) {
+  if (mode === 'tournament') return 'tournament';
+  if (mode === 'freeplay') return 'freeplay';
+  return 'campaign';
+}
 
 function detectLanguage() {
   const saved = localStorage.getItem('blockgame-lang');
@@ -431,21 +499,13 @@ function applyStaticTranslations() {
   document.documentElement.lang = currentLang;
   document.title = t('title');
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (el.id === 'pauseBtn' && gameState === 'playing') {
-      el.textContent = t('pause');
-    } else if (el.id === 'pauseBtn' && gameState === 'paused') {
-      el.textContent = t('continue');
-    } else if (el.id !== 'pauseBtn' || gameState === 'idle') {
-      el.textContent = t(el.dataset.i18n);
-    }
+    el.textContent = t(el.dataset.i18n);
   });
 }
 
 function refreshOverlayText() {
   if (gameState === 'idle') {
     showOverlay(t('title'), getModeStartMessage(), getModeStartButtonText());
-  } else if (gameState === 'paused') {
-    showOverlay(t('paused'), t('pausedMsg'), t('continue'));
   } else if (gameState === 'levelcomplete') {
     if (gameMode === 'tournament') {
       showOverlay(t('tournamentRoundComplete'), getTournamentRoundCompleteMessage(), t('tournamentNextRound'));
@@ -458,7 +518,7 @@ function refreshOverlayText() {
     showOverlay(
       gameMode === 'tournament' ? t('tournamentFail') : t('gameOver'),
       gameMode === 'tournament' ? getTournamentFailMessage() : getGameOverMessage(),
-      gameMode === 'tournament' ? t('tournamentRetry') : t('retryLevel'),
+      gameMode === 'tournament' ? t('tournamentRetry') : gameMode === 'freeplay' ? t('restart') : t('retryLevel'),
     );
   }
 }
@@ -466,6 +526,9 @@ function refreshOverlayText() {
 function getModeStartMessage() {
   if (gameMode === 'tournament') {
     return t('tournamentStartMsg', { day: TournamentSystem.getDayId() });
+  }
+  if (gameMode === 'freeplay') {
+    return t('freeplayStartMsg');
   }
   return getLevelStartMessage();
 }
@@ -483,20 +546,20 @@ function getTournamentRoundCompleteMessage() {
 }
 
 function getTournamentCompleteMessage() {
-  return t('tournamentCompleteMsg', {
+  return appendHighScoreNote(t('tournamentCompleteMsg', {
     total: tournamentState?.totalScore ?? 0,
     clears: tournamentState?.totalClears ?? 0,
     rank: lastTournamentRank ?? '-',
-  });
+  }));
 }
 
 function getTournamentFailMessage() {
-  return t('tournamentFailMsg', {
+  return appendHighScoreNote(t('tournamentFailMsg', {
     round: tournamentState?.round ?? 1,
     max: TournamentSystem.MAX_ROUNDS,
     total: tournamentState?.totalScore ?? 0,
     rank: lastTournamentRank ?? '-',
-  });
+  }));
 }
 
 function getLevelStartMessage() {
@@ -505,8 +568,8 @@ function getLevelStartMessage() {
 }
 
 function getLevelCompleteMessage() {
-  if (currentLevel >= LevelSystem.MAX_LEVEL) return t('maxLevel');
-  return t('levelCompleteMsg', { level: currentLevel, next: currentLevel + 1 });
+  if (currentLevel >= LevelSystem.MAX_LEVEL) return appendHighScoreNote(t('maxLevel'));
+  return appendHighScoreNote(t('levelCompleteMsg', { level: currentLevel, next: currentLevel + 1 }));
 }
 
 function getLevelCompleteButtonText() {
@@ -515,6 +578,10 @@ function getLevelCompleteButtonText() {
 }
 
 function updateLevelUI() {
+  if (levelLabelEl) {
+    levelLabelEl.textContent = gameMode === 'freeplay' ? t('modeFreeplay') : t('level');
+  }
+
   if (gameMode === 'tournament' && tournamentState) {
     levelNumEl.textContent = tournamentState.round;
     if (gameState === 'idle') {
@@ -529,6 +596,16 @@ function updateLevelUI() {
       current: Math.min(clears, levelConfig?.targetClears ?? 0),
       target: levelConfig?.targetClears ?? 0,
     });
+    return;
+  }
+
+  if (gameMode === 'freeplay') {
+    levelNumEl.textContent = '∞';
+    if (gameState === 'idle') {
+      levelGoalEl.textContent = t('freeplayStartMsg');
+      return;
+    }
+    levelGoalEl.textContent = t('freeplayGoal', { clears });
     return;
   }
 
@@ -549,14 +626,18 @@ function updateLevelUI() {
 
 function setGameMode(mode) {
   if (gameState !== 'idle') return;
-  gameMode = mode === 'tournament' ? 'tournament' : 'campaign';
+  gameMode = normalizeGameMode(mode);
   modeCampaignBtn.classList.toggle('active', gameMode === 'campaign');
   modeTournamentBtn.classList.toggle('active', gameMode === 'tournament');
+  modeFreeplayBtn.classList.toggle('active', gameMode === 'freeplay');
   tournamentBoard.hidden = gameMode !== 'tournament';
   document.getElementById('leaderboard').hidden = gameMode === 'tournament';
   if (gameMode === 'tournament') {
     tournamentState = TournamentSystem.createState();
     loadLevel(TournamentSystem.getRoundLevel(1, tournamentState.daySeed));
+  } else if (gameMode === 'freeplay') {
+    tournamentState = null;
+    loadFreePlay();
   } else {
     tournamentState = null;
     loadLevel(currentLevel);
@@ -564,6 +645,7 @@ function setGameMode(mode) {
   updateLevelUI();
   refreshOverlayText();
   renderTournamentLeaderboard();
+  updateHighScoreUI();
 }
 
 function renderTournamentLeaderboard() {
@@ -606,6 +688,102 @@ function saveLeaderboard(entries) {
   localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(entries));
 }
 
+function emptyPersonalRecord() {
+  return { score: 0, clears: 0, date: 0 };
+}
+
+function normalizePersonalRecord(record) {
+  if (!record || typeof record.score !== 'number') return emptyPersonalRecord();
+  return {
+    score: record.score,
+    clears: record.clears || 0,
+    date: record.date || 0,
+  };
+}
+
+function loadPersonalBests() {
+  try {
+    const data = JSON.parse(localStorage.getItem(PERSONAL_BEST_KEY));
+    return {
+      campaign: normalizePersonalRecord(data?.campaign),
+      tournament: normalizePersonalRecord(data?.tournament),
+      freeplay: normalizePersonalRecord(data?.freeplay),
+    };
+  } catch {
+    return {
+      campaign: emptyPersonalRecord(),
+      tournament: emptyPersonalRecord(),
+      freeplay: emptyPersonalRecord(),
+    };
+  }
+}
+
+function getPersonalBestMode() {
+  if (gameMode === 'tournament') return 'tournament';
+  if (gameMode === 'freeplay') return 'freeplay';
+  return 'campaign';
+}
+
+function getActiveHighScoreRecord() {
+  return loadPersonalBests()[getPersonalBestMode()];
+}
+
+function savePersonalBest(mode, gameScore, gameClears) {
+  if (gameScore <= 0) return { isNew: false, record: getActiveHighScoreRecord() };
+  const bests = loadPersonalBests();
+  const key = mode === 'tournament' ? 'tournament' : mode === 'freeplay' ? 'freeplay' : 'campaign';
+  const current = bests[key];
+  if (gameScore <= current.score) return { isNew: false, record: current };
+  const record = { score: gameScore, clears: gameClears, date: Date.now() };
+  bests[key] = record;
+  localStorage.setItem(PERSONAL_BEST_KEY, JSON.stringify(bests));
+  return { isNew: true, record };
+}
+
+function getComparableScore() {
+  if (gameMode === 'tournament' && tournamentState) {
+    return tournamentState.totalScore + (gameState === 'playing' ? score : 0);
+  }
+  return score;
+}
+
+function updateHighScoreUI() {
+  if (!highScoreEl) return;
+  const record = getActiveHighScoreRecord();
+  highScoreEl.textContent = record.score > 0 ? record.score : t('noHighScore');
+  if (highScoreLabel) {
+    const labelKey = gameMode === 'tournament'
+      ? 'highScoreTournament'
+      : gameMode === 'freeplay'
+        ? 'highScoreFreeplay'
+        : 'highScore';
+    highScoreLabel.dataset.i18n = labelKey;
+    highScoreLabel.textContent = t(labelKey);
+  }
+}
+
+function refreshBeatingRecordState() {
+  const record = getActiveHighScoreRecord();
+  const current = getComparableScore();
+  const beating = gameState === 'playing' && current > record.score;
+  highScoreRow?.classList.toggle('is-beating', beating);
+  scoreBoxEl?.classList.toggle('is-beating-record', beating);
+}
+
+function recordPersonalBest(gameScore, gameClears, mode = getPersonalBestMode()) {
+  const result = savePersonalBest(mode, gameScore, gameClears);
+  lastNewHighScore = result.isNew;
+  if (result.isNew) GameAudio.playClear(2, 2);
+  updateHighScoreUI();
+  refreshBeatingRecordState();
+  return result;
+}
+
+function appendHighScoreNote(message) {
+  if (!lastNewHighScore) return message;
+  return `${message} · ${t('newHighScore')}`;
+}
+
 function getPlayerName() {
   const name = playerNameInput.value.trim();
   return (name || t('playerDefault')).slice(0, 12);
@@ -633,7 +811,7 @@ function getGameOverMessage() {
     msg += ` · ${t('rankMsg', { rank: lastGameRank })}`;
     if (lastGameRank === 1) msg += ` ${t('newRecord')}`;
   }
-  return msg;
+  return appendHighScoreNote(msg);
 }
 
 function renderLeaderboard() {
@@ -658,12 +836,12 @@ function setLanguage(lang) {
   localStorage.setItem('blockgame-lang', lang);
   langSelect.value = lang;
   applyStaticTranslations();
+  updateHighScoreUI();
+  updateLevelUI();
   refreshOverlayText();
   renderLeaderboard();
   renderTournamentLeaderboard();
   if (playerNameInput) playerNameInput.placeholder = t('playerName');
-  if (gameState === 'playing') pauseBtn.textContent = t('pause');
-  else if (gameState === 'paused') pauseBtn.textContent = t('continue');
 }
 
 function createBoard() {
@@ -680,9 +858,14 @@ function randomLevelPiece() {
   return LevelSystem.pickPiece(levelRng, PIECE_POOL);
 }
 
-function refillTray() {
-  trayPieces = [randomLevelPiece(), randomLevelPiece(), randomLevelPiece()];
-  selectedIndex = null;
+function ensurePieceQueue() {
+  while (pieceQueue.length < 3) {
+    pieceQueue.push(randomLevelPiece());
+  }
+}
+
+function getCurrentPiece() {
+  return pieceQueue[0] || null;
 }
 
 function canPlace(shape, row, col) {
@@ -712,7 +895,8 @@ function canPlaceAnywhere(shape) {
 }
 
 function checkLevelWin() {
-  if (!levelConfig || gameState !== 'playing') return;
+  if (gameMode === 'freeplay' || !levelConfig || gameState !== 'playing') return;
+  if (levelConfig.targetClears <= 0) return;
   if (clears >= levelConfig.targetClears) {
     completeLevel();
   }
@@ -723,7 +907,6 @@ function completeLevel() {
   delete document.body.dataset.gameStatePlaying;
   GameAudio.stopBgm();
   GameAudio.playClear(1, 1);
-  pauseBtn.disabled = true;
 
   if (gameMode === 'tournament' && tournamentState) {
     tournamentState.totalScore += score;
@@ -734,6 +917,7 @@ function completeLevel() {
 
   LevelSystem.saveProgress(currentLevel + 1);
   saveScoreRecord(score, clears);
+  recordPersonalBest(score, clears, gameMode === 'freeplay' ? 'freeplay' : 'campaign');
   renderLeaderboard();
   showOverlay(t('levelComplete'), getLevelCompleteMessage(), getLevelCompleteButtonText());
 }
@@ -754,13 +938,13 @@ function finishTournament(completed) {
   );
   lastTournamentRank = result.rank;
   lastTournamentCompleted = completed;
+  recordPersonalBest(tournamentState.totalScore, tournamentState.totalClears, 'tournament');
   renderTournamentLeaderboard();
   gameState = completed ? 'tournamentcomplete' : 'gameover';
   delete document.body.dataset.gameStatePlaying;
   GameAudio.stopBgm();
   if (completed) GameAudio.playClear(2, 2);
   else GameAudio.playGameOver();
-  pauseBtn.disabled = true;
   if (completed) {
     showOverlay(t('tournamentComplete'), getTournamentCompleteMessage(), t('tournamentRetry'));
   } else {
@@ -769,16 +953,13 @@ function finishTournament(completed) {
 }
 
 function checkGameOver() {
-  const remaining = trayPieces.filter(p => p !== null);
-  if (remaining.length === 0) return;
-  for (const piece of remaining) {
-    if (canPlaceAnywhere(piece.shape)) return;
-  }
-  endGame();
+  const piece = getCurrentPiece();
+  if (!piece) return;
+  if (!canPlaceAnywhere(piece.shape)) endGame();
 }
 
-function placePiece(index, row, col) {
-  const piece = trayPieces[index];
+function placePiece(row, col) {
+  const piece = getCurrentPiece();
   if (!piece || !canPlace(piece.shape, row, col)) return false;
 
   const cells = countCells(piece.shape);
@@ -792,8 +973,8 @@ function placePiece(index, row, col) {
     }
   }
 
-  trayPieces[index] = null;
-  selectedIndex = null;
+  pieceQueue.shift();
+  ensurePieceQueue();
 
   const cleared = clearFullLines();
   GameAudio.playPlace(cells);
@@ -806,8 +987,8 @@ function placePiece(index, row, col) {
     combo = 0;
   }
 
-  if (trayPieces.every(p => p === null)) {
-    refillTray();
+  if (pieceQueue.length === 0) {
+    ensurePieceQueue();
   }
 
   updateStats();
@@ -932,8 +1113,9 @@ function drawBoard() {
     }
   }
 
-  if (selectedIndex !== null && hoverCell && trayPieces[selectedIndex]) {
-    const piece = trayPieces[selectedIndex];
+  const currentPiece = getCurrentPiece();
+  if (currentPiece && hoverCell && gameState === 'playing') {
+    const piece = currentPiece;
     const valid = canPlace(piece.shape, hoverCell.r, hoverCell.c);
     const alpha = valid ? 0.55 : 0.25;
     for (let r = 0; r < piece.shape.length; r++) {
@@ -950,12 +1132,14 @@ function drawTray() {
   traySlots.forEach((slot, i) => {
     const cvs = slot.querySelector('canvas');
     const c = cvs.getContext('2d');
-    slot.classList.toggle('selected', selectedIndex === i);
-    slot.classList.toggle('used', trayPieces[i] === null);
+    const piece = pieceQueue[i];
+    slot.classList.toggle('selected', i === 0 && !!piece && gameState === 'playing');
+    slot.classList.toggle('preview', i > 0 && !!piece);
+    slot.classList.toggle('used', !piece);
 
-    if (trayPieces[i]) {
-      const cellSize = Math.min(22, Math.floor(90 / Math.max(trayPieces[i].shape.length, trayPieces[i].shape[0].length)));
-      drawShapeOnCanvas(c, trayPieces[i].shape, trayPieces[i].color, 100, 100, cellSize);
+    if (piece) {
+      const cellSize = Math.min(22, Math.floor(90 / Math.max(piece.shape.length, piece.shape[0].length)));
+      drawShapeOnCanvas(c, piece.shape, piece.color, 100, 100, cellSize);
     } else {
       c.clearRect(0, 0, 100, 100);
     }
@@ -973,6 +1157,7 @@ function updateStats() {
   comboEl.textContent = combo;
   comboBoxEl?.classList.toggle('is-active', combo > 0);
   updateLevelUI();
+  refreshBeatingRecordState();
 }
 
 function showOverlay(title, message, btnText) {
@@ -998,6 +1183,12 @@ function getBoardCell(clientX, clientY) {
   return { r: row, c: col };
 }
 
+function loadFreePlay() {
+  levelConfig = LevelSystem.generateFreePlay(PIECE_POOL);
+  levelRng = LevelSystem.createRng(levelConfig.seed + 99991);
+  updateLevelUI();
+}
+
 function loadLevel(levelNum) {
   currentLevel = Math.max(1, Math.min(LevelSystem.MAX_LEVEL, levelNum));
   levelConfig = LevelSystem.generateLevel(currentLevel, PIECE_POOL);
@@ -1009,14 +1200,17 @@ function beginRound() {
   if (gameMode === 'tournament' && tournamentState) {
     const levelNum = TournamentSystem.getRoundLevel(tournamentState.round, tournamentState.daySeed);
     loadLevel(levelNum);
+  } else if (gameMode === 'freeplay') {
+    loadFreePlay();
   } else {
     loadLevel(currentLevel);
   }
   board = levelConfig.board.map(row => [...row]);
-  trayPieces = levelConfig.trayPieces.map(piece => ({
+  pieceQueue = levelConfig.trayPieces.map(piece => ({
     shape: piece.shape.map(row => [...row]),
     color: piece.color,
   }));
+  ensurePieceQueue();
 }
 
 function startGame() {
@@ -1028,17 +1222,15 @@ function startGame() {
     score = 0;
     clears = 0;
     combo = 0;
-    selectedIndex = null;
     hoverCell = null;
     lastGameRank = null;
     lastMadeBoard = false;
+    lastNewHighScore = false;
     lastTournamentRank = null;
     updateStats();
     hideOverlay();
     gameState = 'playing';
     document.body.dataset.gameStatePlaying = 'true';
-    pauseBtn.disabled = false;
-    pauseBtn.textContent = t('pause');
     GameAudio.startBgm();
     drawAll();
   });
@@ -1071,14 +1263,11 @@ function advanceTournamentRound() {
     score = 0;
     clears = 0;
     combo = 0;
-    selectedIndex = null;
     hoverCell = null;
     updateStats();
     hideOverlay();
     gameState = 'playing';
     document.body.dataset.gameStatePlaying = 'true';
-    pauseBtn.disabled = false;
-    pauseBtn.textContent = t('pause');
     GameAudio.startBgm();
     drawAll();
   });
@@ -1086,10 +1275,11 @@ function advanceTournamentRound() {
 
 function resetToIdle() {
   gameState = 'idle';
-  pauseBtn.disabled = true;
   if (gameMode === 'tournament') {
     tournamentState = TournamentSystem.createState();
     loadLevel(TournamentSystem.getRoundLevel(1, tournamentState.daySeed));
+  } else if (gameMode === 'freeplay') {
+    loadFreePlay();
   } else {
     loadLevel(currentLevel);
   }
@@ -1106,31 +1296,16 @@ function endGame() {
   delete document.body.dataset.gameStatePlaying;
   GameAudio.stopBgm();
   GameAudio.playGameOver();
-  pauseBtn.disabled = true;
   const result = saveScoreRecord(score, clears);
   lastGameRank = result.rank;
   lastMadeBoard = result.madeBoard;
+  recordPersonalBest(score, clears, gameMode === 'freeplay' ? 'freeplay' : 'campaign');
   renderLeaderboard();
   showOverlay(t('gameOver'), getGameOverMessage(), t('retryLevel'));
 }
 
-function togglePause() {
-  if (gameState === 'playing') {
-    gameState = 'paused';
-    GameAudio.pauseBgm();
-    pauseBtn.textContent = t('continue');
-    showOverlay(t('paused'), t('pausedMsg'), t('continue'));
-  } else if (gameState === 'paused') {
-    gameState = 'playing';
-    hideOverlay();
-    pauseBtn.textContent = t('pause');
-    GameAudio.startBgm();
-    drawAll();
-  }
-}
-
 canvas.addEventListener('mousemove', (e) => {
-  if (gameState !== 'playing' || selectedIndex === null) return;
+  if (gameState !== 'playing' || !getCurrentPiece()) return;
   hoverCell = getBoardCell(e.clientX, e.clientY);
   drawBoard();
 });
@@ -1141,37 +1316,24 @@ canvas.addEventListener('mouseleave', () => {
 });
 
 canvas.addEventListener('click', (e) => {
-  if (gameState !== 'playing' || selectedIndex === null) return;
+  if (gameState !== 'playing' || !getCurrentPiece()) return;
   const cell = getBoardCell(e.clientX, e.clientY);
   if (cell) {
-    if (!placePiece(selectedIndex, cell.r, cell.c)) {
+    if (!placePiece(cell.r, cell.c)) {
       GameAudio.playInvalid();
     }
   }
 });
 
 canvas.addEventListener('touchstart', (e) => {
-  if (gameState !== 'playing') return;
+  if (gameState !== 'playing' || !getCurrentPiece()) return;
   e.preventDefault();
   const touch = e.touches[0];
-  if (selectedIndex !== null) {
-    const cell = getBoardCell(touch.clientX, touch.clientY);
-    if (cell && !placePiece(selectedIndex, cell.r, cell.c)) {
-      GameAudio.playInvalid();
-    }
+  const cell = getBoardCell(touch.clientX, touch.clientY);
+  if (cell && !placePiece(cell.r, cell.c)) {
+    GameAudio.playInvalid();
   }
 }, { passive: false });
-
-traySlots.forEach((slot) => {
-  const index = Number(slot.dataset.index);
-  slot.addEventListener('click', () => {
-    if (gameState !== 'playing' || !trayPieces[index]) return;
-    selectedIndex = index;
-    GameAudio.playSelect();
-    drawTray();
-    drawBoard();
-  });
-});
 
 document.addEventListener('keydown', (e) => {
   if (gameState === 'idle' || gameState === 'gameover' || gameState === 'levelcomplete' || gameState === 'tournamentcomplete') {
@@ -1183,20 +1345,18 @@ document.addEventListener('keydown', (e) => {
     }
     return;
   }
-  if (e.code === 'KeyP') togglePause();
 });
 
 startBtn.addEventListener('click', () => {
-  if (gameState === 'paused') togglePause();
-  else if (gameState === 'levelcomplete') advanceLevel();
+  if (gameState === 'levelcomplete') advanceLevel();
   else if (gameState === 'tournamentcomplete' || (gameState === 'gameover' && gameMode === 'tournament')) resetToIdle();
   else startGame();
 });
 
 modeCampaignBtn.addEventListener('click', () => setGameMode('campaign'));
 modeTournamentBtn.addEventListener('click', () => setGameMode('tournament'));
+modeFreeplayBtn.addEventListener('click', () => setGameMode('freeplay'));
 
-pauseBtn.addEventListener('click', togglePause);
 langSelect.addEventListener('change', (e) => setLanguage(e.target.value));
 
 function updateSoundButtons() {
@@ -1229,5 +1389,6 @@ playerNameInput.value = localStorage.getItem(NICKNAME_KEY) || '';
 currentLevel = LevelSystem.loadProgress();
 loadLevel(currentLevel);
 setLanguage(currentLang);
+updateHighScoreUI();
 renderTournamentLeaderboard();
 drawAll();

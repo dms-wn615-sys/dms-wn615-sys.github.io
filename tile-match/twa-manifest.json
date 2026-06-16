@@ -1,6 +1,6 @@
 {
-  "packageId": "com.tilematch.game",
-  "host": "YOUR_DOMAIN.com",
+  "packageId": "com.dmsgames.tilematch",
+  "host": "dms-wn615-sys.github.io",
   "name": "타일 매치",
   "launcherName": "타일매치",
   "display": "standalone",
@@ -12,10 +12,10 @@
   "navigationDividerColorDark": "#00000000",
   "backgroundColor": "#FFF5FB",
   "enableNotifications": false,
-  "startUrl": "/index.html",
-  "iconUrl": "https://YOUR_DOMAIN.com/icons/icon-512.png",
-  "maskableIconUrl": "https://YOUR_DOMAIN.com/icons/icon-maskable-512.png",
-  "monochromeIconUrl": "https://YOUR_DOMAIN.com/icons/icon-512.png",
+  "startUrl": "/tile-match/index.html",
+  "iconUrl": "https://dms-wn615-sys.github.io/tile-match/icons/icon-512.png",
+  "maskableIconUrl": "https://dms-wn615-sys.github.io/tile-match/icons/icon-maskable-512.png",
+  "monochromeIconUrl": "https://dms-wn615-sys.github.io/tile-match/icons/icon-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./android.keystore",
@@ -25,7 +25,7 @@
   "appVersionCode": 1,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://YOUR_DOMAIN.com/manifest.json",
+  "webManifestUrl": "https://dms-wn615-sys.github.io/tile-match/manifest.json",
   "fallbackType": "customtabs",
   "features": {
     "playBilling": {

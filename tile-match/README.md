@@ -102,4 +102,4 @@ npm run android:build  # AAB 빌드 → Play Console 업로드
 
 - 개인정보 처리방침: `privacy.html` (Play Console 필수 URL)
 - 스토어 설명 초안: `store-listing/` 폴더
-- 패키지 ID: `com.tilematch.game`
+- 패키지 ID: `com.dmsgames.tilematch`

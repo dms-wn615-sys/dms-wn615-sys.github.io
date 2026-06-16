@@ -13,7 +13,21 @@
     "mobile:setup": "npm run icons && npx cap add android && npx cap add ios",
     "mobile:sync": "npx cap sync",
     "mobile:android": "npx cap open android",
-    "mobile:ios": "npx cap open ios"
+    "mobile:ios": "npx cap open ios",
+    "grac:pack": "node scripts/pack-grac-game.mjs",
+    "grac:pdf": "node scripts/txt-to-pdf.mjs",
+    "grac:video": "node scripts/record-grac-video.mjs",
+    "grac:prepare": "powershell -ExecutionPolicy Bypass -File scripts/grac-prepare.ps1",
+    "toss:dev": "npx ait dev",
+    "toss:build:web": "node scripts/build-toss-web.mjs",
+    "toss:build": "npm run toss:build:web && npx ait build",
+    "toss:assets": "npm run icons && node scripts/prepare-toss-assets.mjs",
+    "toss:screenshots": "node scripts/capture-toss-screenshots.mjs",
+    "toss:rating-screens": "node scripts/capture-rating-screens.mjs",
+    "gov24:pdf": "node scripts/gov24-txt-to-pdf.mjs",
+    "gov24:jpg": "node scripts/gov24-txt-to-jpg.mjs",
+    "play:build": "powershell -ExecutionPolicy Bypass -File scripts/build-play-aab.ps1",
+    "play:keystore": "powershell -ExecutionPolicy Bypass -File scripts/create-android-keystore.ps1"
   },
   "dependencies": {
     "@capacitor/android": "^6.2.0",
@@ -23,11 +37,18 @@
     "@capacitor/status-bar": "^6.0.2"
   },
   "devDependencies": {
+    "@apps-in-toss/web-framework": "^2.7.0",
     "@bubblewrap/cli": "^1.24.0",
     "@capacitor/cli": "^6.2.0",
+    "archiver": "^8.0.0",
+    "pdfkit": "^0.19.1",
+    "playwright": "^1.60.0",
     "sharp": "^0.33.5"
   },
   "capacitor": {
-    "platforms": ["android", "ios"]
+    "platforms": [
+      "android",
+      "ios"
+    ]
   }
 }

@@ -133,7 +133,7 @@ Play Console에는 **AAB** 업로드를 권장합니다.
 
 ## 패키지 정보 (기본값)
 
-- **패키지 ID**: `com.tilematch.game`
+- **패키지 ID**: `com.dmsgames.tilematch`
 - 변경 시 `twa-manifest.json`, `.well-known/assetlinks.json`, `manifest.json` id를 함께 수정
 
 ## 문제 해결
