@@ -51,14 +51,18 @@ Store password: $pass
 Key password: $pass
 SHA256: $sha256
 "@
-Set-Content -Path $credsFile -Value $creds -Encoding UTF8
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText($credsFile, $creds, $utf8NoBom)
 Write-Host "Saved: android.keystore.credentials.txt (gitignored)" -ForegroundColor Green
 
 if ($sha256) {
     $assetlinks = Join-Path (Get-Location) ".well-known\assetlinks.json"
     $json = Get-Content $assetlinks -Raw -Encoding UTF8
-    $json = $json -replace "REPLACE_WITH_YOUR_SHA256_FINGERPRINT", $sha256
-    Set-Content -Path $assetlinks -Value $json -Encoding UTF8 -NoNewline
+    $json = $json -replace '([0-9A-F]{2}:){31}[0-9A-F]{2}', $sha256
+    if ($json -match 'REPLACE_WITH_YOUR_SHA256_FINGERPRINT') {
+        $json = $json -replace 'REPLACE_WITH_YOUR_SHA256_FINGERPRINT', $sha256
+    }
+    [System.IO.File]::WriteAllText($assetlinks, $json.TrimEnd(), $utf8NoBom)
     Write-Host "Updated: .well-known/assetlinks.json" -ForegroundColor Green
     Write-Host ""
     Write-Host "Next: deploy assetlinks.json to GitHub Pages ROOT:"
